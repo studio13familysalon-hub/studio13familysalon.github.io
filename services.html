@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | STUDIO 13 FAMILY SALON</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 20px 0;
+            border-bottom: 3px solid #8e24aa;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #8e24aa;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #8e24aa;
+        }
+
+        .services-section {
+            background: #ffffff;
+            margin: 40px 0;
+            padding: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .services-section h2 {
+            text-align: center;
+            color: #8e24aa;
+            margin-bottom: 40px;
+            font-size: 2.3em;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-box {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .service-box h3 {
+            color: #8e24aa;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .service-box ul {
+            list-style: none;
+        }
+
+        .service-box ul li {
+            padding: 6px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .service-box ul li:last-child {
+            border-bottom: none;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta a {
+            background: #8e24aa;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .cta a:hover {
+            background: #6a1b9a;
+        }
+
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #8e24aa;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>STUDIO 13 FAMILY SALON</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="services-section">
+    <div class="container">
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+
+            <div class="service-box">
+                <h3>Hair Services</h3>
+                <ul>
+                    <li>Men, Women & Kids Haircuts</li>
+                    <li>Hair Wash & Blow Dry</li>
+                    <li>Hair Styling & Ironing</li>
+                    <li>Hair Coloring</li>
+                    <li>Highlights & Global Color</li>
+                    <li>Keratin / Smoothening</li>
+                    <li>Hair Spa & Deep Conditioning</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Men's Grooming</h3>
+                <ul>
+                    <li>Beard Trim & Styling</li>
+                    <li>Shaving</li>
+                    <li>Facial for Men</li>
+                    <li>Head Massage</li>
+                    <li>Men Hair Treatments</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Skin & Beauty Care</h3>
+                <ul>
+                    <li>Facials (All Skin Types)</li>
+                    <li>Clean Up & Bleach</li>
+                    <li>Threading & Eyebrow Shaping</li>
+                    <li>Waxing (Full / Half Body)</li>
+                    <li>Body Polishing</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Hands & Feet Care</h3>
+                <ul>
+                    <li>Manicure</li>
+                    <li>Pedicure</li>
+                    <li>Spa Pedicure</li>
+                    <li>Nail Art</li>
+                    <li>Nail Extensions</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Makeup Services</h3>
+                <ul>
+                    <li>Party Makeup</li>
+                    <li>HD Makeup</li>
+                    <li>Engagement Makeup</li>
+                    <li>Reception Makeup</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Bridal Services</h3>
+                <ul>
+                    <li>Bridal Makeup</li>
+                    <li>Bridal Hairstyling</li>
+                    <li>Mehndi</li>
+                    <li>Complete Bridal Packages</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Kids & Family</h3>
+                <ul>
+                    <li>Kids Haircuts</li>
+                    <li>Family Grooming Packages</li>
+                    <li>Special Occasion Styling</li>
+                </ul>
+            </div>
+
+            <div class="service-box">
+                <h3>Relaxation</h3>
+                <ul>
+                    <li>Head Massage</li>
+                    <li>Body Massage</li>
+                    <li>Stress Relief Therapies</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="cta">
+            <a href="contact.html">Book Your Appointment</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>
+        © 2025 STUDIO 13 FAMILY SALON |
+        <a href="https://www.google.com/search?q=studio+13+family+salon"
+           target="_blank"
+           rel="noopener noreferrer">
+            Find us on Google
+        </a>
+    </p>
+</footer>
+
+</body>
+</html>
