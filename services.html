@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Services | STUDIO 13 FAMILY SALON</title>
+    <meta name="description"
+          content="Explore our complete range of hair, beauty, grooming & bridal services for men, women & kids at STUDIO 13 FAMILY SALON, Navi Mumbai.">
 
     <style>
         * {
@@ -13,9 +16,9 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f7fa;
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%);
+            color: #222;
             line-height: 1.6;
         }
 
@@ -25,65 +28,78 @@
             margin: auto;
         }
 
+        /* HEADER */
         header {
-            background: #ffffff;
-            padding: 20px 0;
-            border-bottom: 3px solid #8e24aa;
+            background: #111;
+            padding: 25px 0;
+            border-bottom: 3px solid #c9a24d;
             text-align: center;
         }
 
         header h1 {
-            color: #8e24aa;
-            font-size: 2.5em;
-        }
-
-        nav {
-            margin-top: 15px;
+            color: #c9a24d;
+            font-size: 2.4em;
+            margin-bottom: 10px;
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 16px;
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #8e24aa;
+            color: #c9a24d;
         }
 
+        /* SERVICES SECTION */
         .services-section {
-            background: #ffffff;
-            margin: 40px 0;
-            padding: 50px 0;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            background: #fff;
+            margin: 50px 0;
+            padding: 60px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
 
         .services-section h2 {
             text-align: center;
-            color: #8e24aa;
-            margin-bottom: 40px;
-            font-size: 2.3em;
+            color: #111;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .services-section p {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 45px;
+            color: #555;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
         }
 
         .service-box {
-            background: #f9f9f9;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            background: #f8f8f8;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
         }
 
         .service-box h3 {
-            color: #8e24aa;
+            color: #c9a24d;
             margin-bottom: 15px;
             text-align: center;
+            font-size: 1.4em;
         }
 
         .service-box ul {
@@ -91,43 +107,45 @@
         }
 
         .service-box ul li {
-            padding: 6px 0;
-            border-bottom: 1px dotted #ccc;
+            padding: 8px 0;
+            border-bottom: 1px dotted #bbb;
+            font-size: 0.95em;
         }
 
         .service-box ul li:last-child {
             border-bottom: none;
         }
 
+        /* CTA */
         .cta {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
         .cta a {
-            background: #8e24aa;
-            color: #fff;
-            padding: 15px 30px;
+            background: #c9a24d;
+            color: #111;
+            padding: 16px 36px;
             text-decoration: none;
             border-radius: 30px;
             font-weight: bold;
-            display: inline-block;
+            transition: background 0.3s ease;
         }
 
         .cta a:hover {
-            background: #6a1b9a;
+            background: #b18e3f;
         }
 
+        /* FOOTER */
         footer {
-            background: #222;
+            background: #111;
             color: #fff;
             text-align: center;
-            padding: 25px 0;
-            margin-top: 40px;
+            padding: 30px 0;
         }
 
         footer a {
-            color: #8e24aa;
+            color: #c9a24d;
             text-decoration: none;
         }
 
@@ -156,7 +174,12 @@
 
 <section class="services-section">
     <div class="container">
-        <h2>Our Services</h2>
+        <h2>Our Professional Services</h2>
+        <p>
+            We offer a complete range of premium salon services designed for men,
+            women and children. Every service is delivered with care, hygiene
+            and professional expertise.
+        </p>
 
         <div class="services-grid">
 
@@ -166,42 +189,42 @@
                     <li>Men, Women & Kids Haircuts</li>
                     <li>Hair Wash & Blow Dry</li>
                     <li>Hair Styling & Ironing</li>
-                    <li>Hair Coloring</li>
-                    <li>Highlights & Global Color</li>
-                    <li>Keratin / Smoothening</li>
-                    <li>Hair Spa & Deep Conditioning</li>
+                    <li>Global Hair Coloring</li>
+                    <li>Highlights & Balayage</li>
+                    <li>Keratin & Smoothening</li>
+                    <li>Hair Spa & Repair Treatments</li>
                 </ul>
             </div>
 
             <div class="service-box">
-                <h3>Men's Grooming</h3>
+                <h3>Men’s Grooming</h3>
                 <ul>
                     <li>Beard Trim & Styling</li>
-                    <li>Shaving</li>
-                    <li>Facial for Men</li>
+                    <li>Classic & Modern Shaving</li>
+                    <li>Men’s Facial Treatments</li>
                     <li>Head Massage</li>
-                    <li>Men Hair Treatments</li>
+                    <li>Hair Fall & Scalp Treatments</li>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Skin & Beauty Care</h3>
                 <ul>
-                    <li>Facials (All Skin Types)</li>
-                    <li>Clean Up & Bleach</li>
+                    <li>Advanced Facials (All Skin Types)</li>
+                    <li>Clean-Up & Bleach</li>
                     <li>Threading & Eyebrow Shaping</li>
                     <li>Waxing (Full / Half Body)</li>
-                    <li>Body Polishing</li>
+                    <li>Body Polishing & Glow Therapy</li>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Hands & Feet Care</h3>
                 <ul>
-                    <li>Manicure</li>
-                    <li>Pedicure</li>
+                    <li>Classic Manicure</li>
+                    <li>Pedicure Treatments</li>
                     <li>Spa Pedicure</li>
-                    <li>Nail Art</li>
+                    <li>Nail Art & Design</li>
                     <li>Nail Extensions</li>
                 </ul>
             </div>
@@ -210,7 +233,7 @@
                 <h3>Makeup Services</h3>
                 <ul>
                     <li>Party Makeup</li>
-                    <li>HD Makeup</li>
+                    <li>HD & Professional Makeup</li>
                     <li>Engagement Makeup</li>
                     <li>Reception Makeup</li>
                 </ul>
@@ -236,11 +259,11 @@
             </div>
 
             <div class="service-box">
-                <h3>Relaxation</h3>
+                <h3>Relaxation Therapies</h3>
                 <ul>
                     <li>Head Massage</li>
                     <li>Body Massage</li>
-                    <li>Stress Relief Therapies</li>
+                    <li>Stress Relief Treatments</li>
                 </ul>
             </div>
 
@@ -254,10 +277,9 @@
 
 <footer>
     <p>
-        © 2025 STUDIO 13 FAMILY SALON |
+        © 2025 STUDIO 13 FAMILY SALON | Navi Mumbai<br>
         <a href="https://www.google.com/search?q=studio+13+family+salon"
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
             Find us on Google
         </a>
     </p>
