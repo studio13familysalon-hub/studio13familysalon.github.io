@@ -4,7 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - STUDIO 13 FAMILY SALON</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f2f2f2; /* light grey background */
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* HEADER */
+        .site-header {
+            background: #111;
+            color: #fff;
+            padding: 25px 0;
+            border-bottom: 4px solid #c9a24d; /* golden accent */
+            text-align: center;
+        }
+
+        .site-header h1 {
+            color: #c9a24d;
+            font-size: 2.6em;
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c9a24d;
+        }
+
+        /* PAGE CONTENT */
+        .page-content {
+            background: #fff;
+            margin: 40px 0;
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .page-content h2 {
+            text-align: center;
+            font-size: 2.8em;
+            color: #111;
+            margin-bottom: 40px;
+        }
+
+        /* GALLERY GRID */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+            border-top: 4px solid #c9a24d;
+        }
+
+        .site-footer a {
+            color: #c9a24d;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .page-content {
+                padding: 40px 20px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -22,17 +131,22 @@
 </header>
 
 <section class="container page-content">
-    <h2>Gallery</h2>
+    <h2>Our Gallery</h2>
+    <p style="text-align:center; margin-bottom:30px; color:#555; font-size:1.1em;">
+        Explore some of our recent styles and salon experiences. We take pride in providing premium haircuts, styling, and beauty services for the entire family.
+    </p>
     <div class="gallery-grid">
-        <img src="images/gallery1.jpg" alt="Style 1">
-        <img src="images/gallery2.jpg" alt="Style 2">
-        <img src="images/gallery3.jpg" alt="Style 3">
-        <img src="images/gallery4.jpg" alt="Style 4">
+        <img src="images/gallery1.jpg" alt="Elegant Hairstyle 1">
+        <img src="images/gallery2.jpg" alt="Elegant Hairstyle 2">
+        <img src="images/gallery3.jpg" alt="Elegant Hairstyle 3">
+        <img src="images/gallery4.jpg" alt="Elegant Hairstyle 4">
+        <img src="images/gallery5.jpg" alt="Salon Interior 1">
+        <img src="images/gallery6.jpg" alt="Salon Interior 2">
     </div>
 </section>
 
 <footer class="site-footer">
-    <p>© 2025 STUDIO 13 FAMILY SALON. All Rights Reserved.</p>
+    <p>© 2025 STUDIO 13 FAMILY SALON. All Rights Reserved. | <a href="https://www.google.com/search?q=studio+13+family+salon" target="_blank" rel="noopener noreferrer">Find us on Google</a></p>
 </footer>
 
 </body>
