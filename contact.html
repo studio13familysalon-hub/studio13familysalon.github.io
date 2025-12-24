@@ -4,7 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - STUDIO 13 FAMILY SALON</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f2f2f2; /* light grey */
+            color: #222;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* HEADER */
+        .site-header {
+            background: #111;
+            color: #fff;
+            padding: 25px 0;
+            border-bottom: 4px solid #c9a24d; /* golden border */
+            text-align: center;
+        }
+
+        .site-header h1 {
+            color: #c9a24d;
+            font-size: 2.6em;
+            margin-bottom: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c9a24d;
+        }
+
+        /* PAGE CONTENT */
+        .page-content {
+            background: #fff;
+            margin: 40px 0;
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .page-content h2 {
+            text-align: center;
+            font-size: 2.8em;
+            color: #111;
+            margin-bottom: 30px;
+        }
+
+        .branch {
+            margin-bottom: 30px;
+        }
+
+        .branch h3 {
+            color: #c9a24d;
+            margin-bottom: 10px;
+        }
+
+        .branch p {
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .branch strong {
+            color: #111;
+        }
+
+        /* FORM */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 1em;
+            width: 100%;
+            resize: none;
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #c9a24d;
+            box-shadow: 0 0 10px rgba(201, 162, 77, 0.3);
+            outline: none;
+        }
+
+        .contact-form button {
+            background: #111;
+            color: #c9a24d;
+            padding: 15px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #222;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .site-footer a {
+            color: #c9a24d;
+            text-decoration: none;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .page-content {
+                padding: 40px 20px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -23,20 +193,40 @@
 
 <section class="container page-content">
     <h2>Contact Us</h2>
-    <p><strong>Address:</strong> Sanpada, Shop no. 20, Moraj Residency, Next to Axis Bank,Palm Baech, Sanpada, Navi Mumbai,Maharastra 400705 & Nerul, Shop no. 1,2,3, next to South Indian Bank, Ruparel Garden Residency, Nerul East, Sector 23, Navi Mumbai, Maharastra 400706 Navi Mumbai</p>
-    <p><strong>Phone:</strong> +91‑7506961313</p>
-    <p><strong>Email:</strong> studio13familysalon@gmail.com</p>
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
+
+    <div class="branch">
+        <h3>Sanpada Branch</h3>
+        <p><strong>Address:</strong> Shop No. 20, Moraj Residency, Next to Axis Bank, Palm Beach, Sanpada, Navi Mumbai, Maharashtra 400705</p>
+        <p><strong>Telephone:</strong> 022-41231313</p>
+        <p><strong>Mobile:</strong> 7506961313</p>
+    </div>
+
+    <div class="branch">
+        <h3>Nerul Branch</h3>
+        <p><strong>Address:</strong> Shop No. 1,2,3, Next to South Indian Bank, Ruparel Garden Residency, Nerul East, Sector 23, Navi Mumbai, Maharashtra 400706</p>
+        <p><strong>Telephone:</strong> 022-35691227</p>
+        <p><strong>Mobile:</strong> 9152161313</p>
+    </div>
+
+    <form class="contact-form" action="mailto:studio13familysalon@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
         <button type="submit">Send Message</button>
     </form>
 </section>
 
 <footer class="site-footer">
-    <p>© 2025 STUDIO 13 FAMILY SALON. All Rights Reserved.</p>
+    <p>© 2025 STUDIO 13 FAMILY SALON. All Rights Reserved. | <a href="https://www.google.com/search?q=studio+13+family+salon" target="_blank" rel="noopener noreferrer">Find us on Google</a></p>
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917506961313" target="_blank" class="whatsapp-button">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- FontAwesome for WhatsApp Icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 </body>
 </html>
