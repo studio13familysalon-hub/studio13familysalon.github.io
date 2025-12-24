@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>STUDIO 13 FAMILY SALON | Premium Family Salon in Navi Mumbai</title>
-
     <meta name="description"
           content="STUDIO 13 FAMILY SALON is a premium family salon in Navi Mumbai offering expert haircuts, beauty, grooming & bridal services for men, women & kids.">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <link rel="stylesheet" href="style.css">
-
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%);
+            background: #f2f2f2;
             color: #222;
         }
 
@@ -32,7 +28,7 @@
         .site-header {
             background: #111;
             padding: 20px 0;
-            border-bottom: 3px solid #c9a24d;
+            border-bottom: 4px solid #c9a24d;
         }
 
         .site-header h1 {
@@ -61,19 +57,19 @@
         /* HERO */
         .hero {
             background: linear-gradient(
-                rgba(0,0,0,0.7),
-                rgba(0,0,0,0.7)
-            ),
-            url("https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+                    rgba(0,0,0,0.6),
+                    rgba(0,0,0,0.6)
+                ),
+                url("https://images.unsplash.com/photo-1590097468803-99679c3c7c83?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
             background-size: cover;
             background-position: center;
             color: #fff;
-            padding: 90px 0;
+            padding: 100px 0;
             text-align: center;
         }
 
         .hero h2 {
-            font-size: 2.8em;
+            font-size: 3em;
             margin-bottom: 15px;
             color: #fff;
         }
@@ -161,6 +157,12 @@
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-box:hover,
+        .service-box:hover {
+            transform: translateY(-5px);
         }
 
         .feature-box h3,
@@ -175,11 +177,12 @@
             margin-bottom: 15px;
         }
 
-        /* SERVICES */
         .services-preview img {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 12px;
+            object-fit: cover;
+            height: 250px;
         }
 
         .services-preview .btn {
@@ -188,7 +191,6 @@
             margin: 40px auto 0;
         }
 
-        /* LOCATIONS */
         .locations {
             background: #111;
             color: #fff;
@@ -201,17 +203,17 @@
         .location-box {
             background: #1c1c1c;
             color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .location-box:hover {
+            transform: translateY(-5px);
         }
 
         .location-box i {
             font-size: 2em;
             color: #c9a24d;
             margin-bottom: 15px;
-        }
-
-        /* TESTIMONIALS */
-        .testimonials {
-            background: #fff;
         }
 
         .testimonial-box p {
@@ -225,7 +227,6 @@
             margin-bottom: 10px;
         }
 
-        /* FINAL CTA */
         .final-cta {
             background: linear-gradient(135deg, #111 0%, #333 100%);
             color: #fff;
@@ -236,7 +237,6 @@
             color: #c9a24d;
         }
 
-        /* FOOTER */
         .site-footer {
             background: #111;
             color: #fff;
@@ -275,10 +275,7 @@
 <section class="hero">
     <div class="container">
         <h2>Style, Care & Confidence for the Whole Family</h2>
-        <p>
-            Premium hair, beauty and grooming services for men, women and kids
-            in Sanpada & Nerul, Navi Mumbai.
-        </p>
+        <p>Premium hair, beauty, and grooming services for men, women, and kids in Sanpada & Nerul, Navi Mumbai.</p>
 
         <div class="hero-buttons">
             <a href="contact.html" class="btn">Book Appointment</a>
@@ -296,9 +293,7 @@
 <section class="intro container">
     <h2>Your Trusted Family Salon</h2>
     <p>
-        STUDIO 13 FAMILY SALON is designed to offer a complete salon experience
-        under one roof. From modern haircuts to relaxing beauty treatments,
-        we focus on quality, hygiene and personalized care for every client.
+        STUDIO 13 FAMILY SALON offers a complete salon experience under one roof. Modern haircuts, beauty treatments, and personalized care for every client.
     </p>
 </section>
 
