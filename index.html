@@ -3,14 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDIO 13 FAMILY SALON | Best Family Salon in Navi Mumbai</title>
-    <meta name="description" content="STUDIO 13 FAMILY SALON offers professional hair, beauty, grooming & bridal services for men, women & kids in Sanpada & Nerul, Navi Mumbai.">
+
+    <title>STUDIO 13 FAMILY SALON | Premium Family Salon in Navi Mumbai</title>
+
+    <meta name="description"
+          content="STUDIO 13 FAMILY SALON is a premium family salon in Navi Mumbai offering expert haircuts, beauty, grooming & bridal services for men, women & kids.">
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%);
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* HEADER */
+        .site-header {
+            background: #111;
+            padding: 20px 0;
+            border-bottom: 3px solid #c9a24d;
+        }
+
+        .site-header h1 {
+            text-align: center;
+            color: #c9a24d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c9a24d;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)
+            ),
+            url("https://via.placeholder.com/1600x700/111/ffffff?text=STUDIO+13+FAMILY+SALON");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 90px 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            max-width: 750px;
+            margin: auto;
+            color: #e0e0e0;
+        }
+
+        .hero-buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 10px;
+            background: #c9a24d;
+            color: #111;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #b18e3f;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #c9a24d;
+            color: #c9a24d;
+        }
+
+        .hero-highlights {
+            margin-top: 25px;
+            font-size: 0.95em;
+            color: #ddd;
+        }
+
+        .hero-highlights span {
+            margin: 0 12px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 70px 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.4em;
+            margin-bottom: 30px;
+            color: #111;
+        }
+
+        .intro p {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #444;
+            line-height: 1.8;
+        }
+
+        /* WHY US */
+        .why-us {
+            background: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-box,
+        .service-box,
+        .testimonial-box,
+        .location-box {
+            background: #f8f8f8;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-box h3,
+        .service-box h3 {
+            color: #c9a24d;
+            margin-bottom: 10px;
+        }
+
+        /* SERVICES */
+        .services-preview img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 12px;
+        }
+
+        .services-preview .btn {
+            display: block;
+            width: fit-content;
+            margin: 40px auto 0;
+        }
+
+        /* LOCATIONS */
+        .locations {
+            background: #111;
+            color: #fff;
+        }
+
+        .locations h2 {
+            color: #c9a24d;
+        }
+
+        .location-box {
+            background: #1c1c1c;
+            color: #fff;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            background: #fff;
+        }
+
+        .testimonial-box p {
+            font-style: italic;
+            color: #444;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #111 0%, #333 100%);
+            color: #fff;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: #c9a24d;
+        }
+
+        /* FOOTER */
+        .site-footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .site-footer a {
+            color: #c9a24d;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2em;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="site-header">
     <div class="container">
         <h1>STUDIO 13 FAMILY SALON</h1>
@@ -24,11 +251,13 @@
     </div>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
     <div class="container">
         <h2>Style, Care & Confidence for the Whole Family</h2>
-        <p>Premium salon services for Men, Women & Kids in Sanpada & Nerul, Navi Mumbai.</p>
+        <p>
+            Premium hair, beauty and grooming services for men, women and kids
+            in Sanpada & Nerul, Navi Mumbai.
+        </p>
 
         <div class="hero-buttons">
             <a href="contact.html" class="btn">Book Appointment</a>
@@ -38,81 +267,71 @@
         <div class="hero-highlights">
             <span>✔ Experienced Stylists</span>
             <span>✔ Family Friendly</span>
-            <span>✔ Affordable Pricing</span>
+            <span>✔ Trusted by Locals</span>
         </div>
     </div>
 </section>
 
-<!-- INTRO -->
 <section class="intro container">
     <h2>Your Trusted Family Salon</h2>
     <p>
-        At STUDIO 13 FAMILY SALON, we believe everyone deserves to look and feel their best.
-        From trendy haircuts to relaxing beauty treatments, we provide complete salon care
-        in a clean, comfortable and friendly environment.
+        STUDIO 13 FAMILY SALON is designed to offer a complete salon experience
+        under one roof. From modern haircuts to relaxing beauty treatments,
+        we focus on quality, hygiene and personalized care for every client.
     </p>
 </section>
 
-<!-- WHY CHOOSE US -->
 <section class="why-us">
     <div class="container">
-        <h2>Why Choose STUDIO 13?</h2>
-
+        <h2>Why Choose STUDIO 13</h2>
         <div class="grid">
             <div class="feature-box">
-                <h3>Professional Team</h3>
-                <p>Trained stylists with years of salon experience.</p>
+                <h3>Expert Team</h3>
+                <p>Professionally trained stylists with years of experience.</p>
             </div>
             <div class="feature-box">
-                <h3>Family Friendly</h3>
-                <p>Special care for kids, men & women under one roof.</p>
+                <h3>Family Focused</h3>
+                <p>Comfortable and safe services for all age groups.</p>
             </div>
             <div class="feature-box">
-                <h3>Quality Products</h3>
-                <p>We use branded and skin-safe salon products.</p>
+                <h3>Premium Products</h3>
+                <p>Only quality and skin-safe salon products used.</p>
             </div>
             <div class="feature-box">
-                <h3>Great Locations</h3>
+                <h3>Prime Locations</h3>
                 <p>Conveniently located in Sanpada & Nerul.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- SERVICES PREVIEW -->
 <section class="services-preview container">
     <h2>Our Popular Services</h2>
-
     <div class="grid">
         <div class="service-box">
-            <img src="images/haircut.jpg" alt="Haircut & Styling">
+            <img src="images/haircut.jpg" alt="Haircuts">
             <h3>Haircuts & Styling</h3>
-            <p>Trendy haircuts for men, women & kids.</p>
+            <p>Modern styles for men, women & kids.</p>
         </div>
-
         <div class="service-box">
             <img src="images/coloring.jpg" alt="Hair Coloring">
             <h3>Hair Coloring</h3>
-            <p>Global color, highlights & hair treatments.</p>
+            <p>Global color, highlights & treatments.</p>
         </div>
-
         <div class="service-box">
             <img src="images/facial.jpg" alt="Facials">
             <h3>Facials & Beauty</h3>
-            <p>Glow-boosting facials and skin care.</p>
+            <p>Advanced skincare for healthy glow.</p>
         </div>
-
         <div class="service-box">
             <img src="images/bridal.jpg" alt="Bridal Makeup">
             <h3>Bridal & Party Makeup</h3>
-            <p>Perfect looks for weddings & events.</p>
+            <p>Perfect looks for special occasions.</p>
         </div>
     </div>
-
     <a href="services.html" class="btn">View All Services</a>
 </section>
 
-<!-- LOCATIONS -->
 <section class="locations">
     <div class="container">
         <h2>Our Locations</h2>
@@ -129,47 +348,39 @@
     </div>
 </section>
 
-<!-- TESTIMONIALS -->
 <section class="testimonials">
     <div class="container">
-        <h2>What Our Clients Say</h2>
-
+        <h2>Client Reviews</h2>
         <div class="grid">
             <div class="testimonial-box">
-                <p>“Very clean salon and friendly staff. Great haircut!”</p>
+                <p>“Very clean salon and friendly staff. Excellent service.”</p>
                 <strong>– Google Review</strong>
             </div>
-
             <div class="testimonial-box">
                 <p>“Best family salon in the area. Highly recommended.”</p>
                 <strong>– Local Customer</strong>
             </div>
-
             <div class="testimonial-box">
-                <p>“Amazing bridal makeup. Loved the service.”</p>
+                <p>“Bridal makeup was perfect. Thank you STUDIO 13!”</p>
                 <strong>– Happy Bride</strong>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CALL TO ACTION -->
 <section class="final-cta">
     <div class="container">
         <h2>Ready for a Fresh Look?</h2>
-        <p>Book your appointment today and experience professional salon care.</p>
+        <p>Book your appointment today and experience premium salon care.</p>
         <a href="contact.html" class="btn">Book Now</a>
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="site-footer">
     <p>
-        © 2025 STUDIO 13 FAMILY SALON | Navi Mumbai  
-        <br>
+        © 2025 STUDIO 13 FAMILY SALON | Navi Mumbai<br>
         <a href="https://www.google.com/search?q=studio+13+family+salon"
-           target="_blank"
-           rel="noopener noreferrer">
+           target="_blank" rel="noopener noreferrer">
             Find us on Google
         </a>
     </p>
