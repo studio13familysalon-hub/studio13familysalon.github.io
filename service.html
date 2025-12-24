@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - STUDIO 13 FAMILY SALON</title>
+
     <style>
         * {
             margin: 0;
@@ -40,7 +41,6 @@
             color: #8e24aa;
             font-size: 2.5em;
             font-weight: bold;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -73,15 +73,20 @@
         .page-content h2 {
             text-align: center;
             color: #8e24aa;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 2.5em;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.2em;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 40px;
         }
 
         .service-item {
@@ -104,24 +109,14 @@
             font-size: 1.5em;
         }
 
-        .service-item p {
-            margin-bottom: 15px;
-        }
-
         .service-item ul {
             list-style: none;
             padding: 0;
         }
 
         .service-item ul li {
-            margin: 5px 0;
-            font-weight: bold;
-        }
-
-        .service-item .price {
-            color: #d32f2f;
-            font-weight: bold;
-            font-size: 1.2em;
+            margin: 6px 0;
+            font-weight: 600;
         }
 
         .cta {
@@ -138,12 +133,11 @@
             font-weight: bold;
             font-size: 1.1em;
             transition: background 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .cta .btn:hover {
             background: #6a1b9a;
-            transform: translateY(-5px);
+            transform: translateY(-4px);
         }
 
         .site-footer {
@@ -159,21 +153,6 @@
             text-decoration: none;
         }
 
-        .site-footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .page-content h2 {
-                font-size: 2em;
-            }
-        }
-
-        /* Animation for fade-in */
         .fade-in {
             animation: fadeIn 1s ease-in;
         }
@@ -182,109 +161,81 @@
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        @media (max-width: 768px) {
+            .page-content h2 {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1>STUDIO 13 FAMILY SALON</h1>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+    <div class="container">
+        <h1>STUDIO 13 FAMILY SALON</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
 
-    <section class="container page-content fade-in">
-        <h2>Our Services</h2>
-        <p style="text-align: center; margin-bottom: 40px; font-size: 1.2em;">At STUDIO 13 FAMILY SALON, we offer a wide range of professional beauty and grooming services tailored to meet your needs. Based on our Google My Business listing, here are our comprehensive services with approximate pricing (prices may vary; contact us for exact quotes).</p>
-        
-        <div class="services-grid">
-            <div class="service-item">
-                <h3>Hair Services</h3>
-                <p>Expert hair care for all styles and needs.</p>
-                <ul>
-                    <li>Haircut & Styling - ₹300-₹800</li>
-                    <li>Hair Wash & Blow Dry - ₹200-₹500</li>
-                    <li>Hair Coloring - ₹500-₹2000</li>
-                    <li>Highlights & Balayage - ₹800-₹3000</li>
-                    <li>Hair Treatments (Keratin, Protein) - ₹1000-₹2500</li>
-                    <li>Hair Spa & Conditioning - ₹600-₹1500</li>
-                </ul>
-            </div>
-            
-            <div class="service-item">
-                <h3>Beauty & Skin Care</h3>
-                <p>Rejuvenate your skin with our premium treatments.</p>
-                <ul>
-                    <li>Facials (Hydrating, Anti-Aging) - ₹500-₹1500</li>
-                    <li>Clean-Up & Bleach - ₹300-₹800</li>
-                    <li>Threading & Eyebrow Shaping - ₹50-₹200</li>
-                    <li>Waxing (Full Body) - ₹500-₹1500</li>
-                    <li>Manicure & Pedicure - ₹300-₹800</li>
-                    <li>Body Polishing & Scrubs - ₹600-₹1200</li>
-                </ul>
-            </div>
-            
-            <div class="service-item">
-                <h3>Grooming & Men's Services</h3>
-                <p>Specialized grooming for men and families.</p>
-                <ul>
-                    <li>Beard Grooming & Shaping - ₹200-₹500</li>
-                    <li>Shaving & Facial for Men - ₹300-₹700</li>
-                    <li>Men's Haircut - ₹250-₹600</li>
-                    <li>Head Massage - ₹200-₹400</li>
-                    <li>Body Waxing for Men - ₹400-₹1000</li>
-                </ul>
-            </div>
-            
-            <div class="service-item">
-                <h3>Makeup & Bridal Services</h3>
-                <p>Perfect looks for special occasions.</p>
-                <ul>
-                    <li>Bridal Makeup - ₹2000-₹5000</li>
-                    <li>Party Makeup - ₹800-₹2000</li>
-                    <li>HD Makeup - ₹1000-₹2500</li>
-                    <li>Mehndi Application - ₹500-₹1500</li>
-                    <li>Bridal Hairstyling - ₹1000-₹3000</li>
-                </ul>
-            </div>
-            
-            <div class="service-item">
-                <h3>Additional Services</h3>
-                <p>Extra pampering and specialty treatments.</p>
-                <ul>
-                    <li>Nail Art & Extensions - ₹300-₹1000</li>
-                    <li>Eyelash Extensions - ₹500-₹1500</li>
-                    <li>Tattoo & Henna Designs - ₹200-₹800</li>
-                    <li>Body Massage - ₹800-₹2000</li>
-                    <li>Anti-Aging Treatments - ₹1000-₹3000</li>
-                    <li>Children's Haircuts - ₹150-₹400</li>
-                </ul>
-            </div>
-            
-            <div class="service-item">
-                <h3>Packages & Offers</h3>
-                <p>Custom packages for ultimate value.</p>
-                <ul>
-                    <li>Bridal Package (Hair + Makeup) - ₹3000-₹7000</li>
-                    <li>Detox Facial Package - ₹1500-₹2500</li>
-                    <li>Family Grooming Package - ₹2000-₹5000</li>
-                    <li>Monthly Maintenance Plans - Contact for details</li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="cta">
-            <a href="contact.html" class="btn">Book an Appointment</a>
-        </div>
-    </section>
+<section class="container page-content fade-in">
+    <h2>Our Services</h2>
+    <p class="intro-text">
+        At STUDIO 13 FAMILY SALON, we offer professional beauty and grooming services tailored for everyone.
+        Prices may vary – contact us for exact details.
+    </p>
 
-    <footer class="site-footer">
-        <p>© 2025 STUDIO 13 FAMILY SALON. All Rights Reserved. | <a href="https://www.google.com/search?q=studio+13+family+salon" target="_blank">Find Us on Google</a></p>
-    </footer>
+    <div class="services-grid">
+        <div class="service-item">
+            <h3>Hair Services</h3>
+            <ul>
+                <li>Haircut & Styling – ₹300–₹800</li>
+                <li>Hair Wash & Blow Dry – ₹200–₹500</li>
+                <li>Hair Coloring – ₹500–₹2000</li>
+                <li>Hair Treatments – ₹1000–₹2500</li>
+            </ul>
+        </div>
+
+        <div class="service-item">
+            <h3>Beauty & Skin Care</h3>
+            <ul>
+                <li>Facials – ₹500–₹1500</li>
+                <li>Threading – ₹50–₹200</li>
+                <li>Waxing – ₹500–₹1500</li>
+                <li>Manicure & Pedicure – ₹300–₹800</li>
+            </ul>
+        </div>
+
+        <div class="service-item">
+            <h3>Makeup & Bridal</h3>
+            <ul>
+                <li>Bridal Makeup – ₹2000–₹5000</li>
+                <li>Party Makeup – ₹800–₹2000</li>
+                <li>Bridal Hairstyling – ₹1000–₹3000</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cta">
+        <a href="contact.html" class="btn">Book an Appointment</a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <p>
+        © 2025 STUDIO 13 FAMILY SALON |
+        <a href="https://www.google.com/search?q=studio+13+family+salon"
+           target="_blank"
+           rel="noopener noreferrer">
+            Find Us on Google
+        </a>
+    </p>
+</footer>
 </body>
 </html>
