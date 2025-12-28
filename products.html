@@ -103,6 +103,28 @@ h2 {
     margin-bottom: 40px;
 }
 
+/* Filter Buttons */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: #c9a24d;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: #b18e3f;
+}
+
 /* Products Grid */
 .grid {
     display: grid;
@@ -117,6 +139,7 @@ h2 {
     text-align: center;
     box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: block; /* Default show */
 }
 
 .product-box:hover {
@@ -150,6 +173,12 @@ h2 {
     margin-bottom: 12px;
 }
 
+.stock {
+    font-size: 0.9em;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
 /* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;
@@ -172,6 +201,40 @@ h2 {
 
 .whatsapp-float:hover {
     transform: scale(1.1);
+}
+
+/* Why Choose Us */
+.why-choose-us {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.why-choose-us h2 {
+    margin-bottom: 20px;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.why-choose-us li {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.why-choose-us li i {
+    font-size: 2em;
+    color: #c9a24d;
+    margin-bottom: 10px;
 }
 
 /* Final CTA */
@@ -198,6 +261,18 @@ h2 {
 /* Responsive */
 @media (max-width: 768px) {
     h2 { font-size: 2em; }
+    .filter-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .filter-btn {
+        margin: 5px 0;
+    }
+    .why-choose-us ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 </style>
 </head>
@@ -221,49 +296,96 @@ h2 {
 <section class="hero">
     <div class="container">
         <h2>Shop Premium Salon Products</h2>
-        <p>High-quality hair & beauty products curated for you.</p>
-        <a href="contact.html" class="btn">Book Appointment</a>
+        <p>Discover high-quality, professional-grade hair and beauty products from L'Oréal Professional and Kerastase. Trusted by salons worldwide for exceptional results.</p>
+        <a href="#products" class="btn">Browse Products</a>
     </div>
 </section>
 
-<section class="products-preview container">
+<section id="products" class="products-preview container">
     <h2>Our Products</h2>
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="loreal">L'Oréal Professional</button>
+        <button class="filter-btn" data-filter="kerastase">Kerastase</button>
+    </div>
     <div class="grid">
-        <div class="product-box">
-            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" alt="Premium Shampoo">
-            <h3>Premium Shampoo</h3>
-            <p>Gentle, nourishing shampoo for all hair types.</p>
-            <div class="price">₹500</div>
-            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20Premium%20Shampoo" target="_blank" class="btn">Buy on WhatsApp</a>
+        <!-- L'Oréal Professional Products -->
+        <div class="product-box loreal">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" alt="L'Oréal Professionnel Serie Expert Shampoo - Gentle, nourishing shampoo for all hair types">
+            <h3>L'Oréal Professionnel Serie Expert Shampoo</h3>
+            <p>Gentle, nourishing shampoo for all hair types. Infused with vitamins for healthy, shiny hair. 250ml.</p>
+            <div class="price">₹550</div>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20L'Oréal%20Professionnel%20Serie%20Expert%20Shampoo" target="_blank" class="btn" aria-label="Buy L'Oréal Professionnel Serie Expert Shampoo on WhatsApp">Buy on WhatsApp</a>
         </div>
-        <div class="product-box">
-            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair Color Kit">
-            <h3>Hair Color Kit</h3>
-            <p>High-quality hair coloring kit for salon-style results at home.</p>
+        <div class="product-box loreal">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="L'Oréal Professionnel Serie Expert Conditioner - Deep conditioning treatment for damaged hair">
+            <h3>L'Oréal Professionnel Serie Expert Conditioner</h3>
+            <p>Deep conditioning treatment that detangles and smooths hair. Ideal for damaged or dry hair. 200ml.</p>
+            <div class="price">₹600</div>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20L'Oréal%20Professionnel%20Serie%20Expert%20Conditioner" target="_blank" class="btn" aria-label="Buy L'Oréal Professionnel Serie Expert Conditioner on WhatsApp">Buy on WhatsApp</a>
+        </div>
+        <div class="product-box loreal">
+            <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=400&q=80" alt="L'Oréal Professionnel Tecni.Art Fix Design Hairspray - Strong hold hairspray for styles">
+            <h3>L'Oréal Professionnel Tecni.Art Fix Design Hairspray</h3>
+            <p>Strong hold hairspray for long-lasting styles. Provides volume and shine without stiffness. 300ml.</p>
+            <div class="price">₹700</div>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20L'Oréal%20Professionnel%20Tecni.Art%20Fix%20Design%20Hairspray" target="_blank" class="btn" aria-label="Buy L'Oréal Professionnel Tecni.Art Fix Design Hairspray on WhatsApp">Buy on WhatsApp</a>
+        </div>
+        <div class="product-box loreal">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=400&q=80" alt="L'Oréal Professionnel Majirel Hair Color - Professional permanent hair color">
+            <h3>L'Oréal Professionnel Majirel Hair Color</h3>
+            <p>Professional permanent hair color for vibrant, long-lasting results. Ammonia-free formula. 50ml tube.</p>
+            <div class="price">₹450</div>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20L'Oréal%20Professionnel%20Majirel%20Hair%20Color" target="_blank" class="btn" aria-label="Buy L'Oréal Professionnel Majirel Hair Color on WhatsApp">Buy on WhatsApp</a>
+        </div>
+        <div class="product-box loreal">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="L'Oréal Professionnel Mythic Oil Serum - Multi-benefit oil serum for hair">
+            <h3>L'Oréal Professionnel Mythic Oil Serum</h3>
+            <p>Multi-benefit oil serum for instant shine and nourishment. Tames frizz and protects hair. 100ml.</p>
             <div class="price">₹800</div>
-            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20Hair%20Color%20Kit" target="_blank" class="btn">Buy on WhatsApp</a>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20L'Oréal%20Professionnel%20Mythic%20Oil%20Serum" target="_blank" class="btn" aria-label="Buy L'Oréal Professionnel Mythic Oil Serum on WhatsApp">Buy on WhatsApp</a>
         </div>
-        <!-- Add more products here following the same structure -->
-    </div>
-</section>
-
-<section class="final-cta">
-    <div class="container">
-        <h2>Ready to Transform Your Look?</h2>
-        <a href="contact.html" class="btn">Book Appointment</a>
-    </div>
-</section>
-
-<footer class="site-footer">
-    <div class="container">
-        <p>&copy; 2025 STUDIO 13 FAMILY SALON. All Rights Reserved.</p>
-    </div>
-</footer>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/917506961313" class="whatsapp-float" target="_blank" aria-label="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
-</body>
-</html>
+        <div class="product-box loreal">
+            <img src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=400&q=80" alt="L'Oréal Professionnel Smartbond Treatment - Pre-treatment for hair bonds">
+            <h3>L'Oréal Professionnel Smartbond Treatment</h3>
+            <p>Pre-treatment to strengthen hair bonds before coloring or chemical services. Reduces breakage. 200ml.</p>
+            <div class="price">₹900</div>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20L'Oréal%20Professionnel%20Smartbond%20Treatment" target="_blank" class="btn" aria-label="Buy L'Oréal Professionnel Smartbond Treatment on WhatsApp">Buy on WhatsApp</a>
+        </div>
+        <!-- Kerastase Products -->
+        <div class="product-box kerastase">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="Kerastase Densifique Bain Densite Shampoo - Volumizing shampoo for fine hair">
+            <h3>Kerastase Densifique Bain Densite Shampoo</h3>
+            <p>Volumizing shampoo for fine, thinning hair. Strengthens roots and adds density. 250ml.</p>
+            <div class="price">₹1200</div>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20Kerastase%20Densifique%20Bain%20Densite%20Shampoo" target="_blank" class="btn" aria-label="Buy Kerastase Densifique Bain Densite Shampoo on WhatsApp">Buy on WhatsApp</a>
+        </div>
+        <div class="product-box kerastase">
+            <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=400&q=80" alt="Kerastase Nutritive Bain Satin 1 Shampoo - Nourishing shampoo for dry hair">
+            <h3>Kerastase Nutritive Bain Satin 1 Shampoo</h3>
+            <p>Nourishing shampoo for dry, damaged hair. Infused with iris root extract for softness. 250ml.</p>
+            <div class="price">₹1100</div>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20Kerastase%20Nutritive%20Bain%20Satin%201%20Shampoo" target="_blank" class="btn" aria-label="Buy Kerastase Nutritive Bain Satin 1 Shampoo on WhatsApp">Buy on WhatsApp</a>
+        </div>
+        <div class="product-box kerastase">
+            <img src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=400&q=80" alt="Kerastase Elixir Ultime L'Huile Originale Oil - Luxury hair oil">
+            <h3>Kerastase Elixir Ultime L'Huile Originale Oil</h3>
+            <p>Luxury hair oil for shine and protection. Lightweight formula with argan oil. 100ml.</p>
+            <div class="price">₹1500</div>
+            <div class="stock">In Stock</div>
+            <a href="https://wa.me/917506961313?text=I%20want%20to%20buy%20Kerastase%20Elixir%20Ultime%20L'Huile%20Originale%20Oil" target="_blank" class="btn" aria-label="Buy Kerastase Elixir Ultime L'Huile Originale Oil on WhatsApp">Buy on WhatsApp</a>
+        </div>
+        <div class="product-box kerastase">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=400&q=80" alt="Kerastase Discipline Maskeratine Hair Mask - Intensive mask for frizzy hair">
+            <h3>Kerastase Discipline Maskeratine Hair Mask</h3>
+            <p>Intensive mask for unruly, frizzy hair. Smooths and controls for up to 72 hours. 200ml.</p>
+            <div class="price">₹1400</div>
+            <div class="stock">In Stock</div>
