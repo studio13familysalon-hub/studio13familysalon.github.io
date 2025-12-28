@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>STUDIO 13 FAMILY SALON | Premium Family Salon in Navi Mumbai</title>
-
-    <meta name="description"
-          content="STUDIO 13 FAMILY SALON is a premium family salon in Navi Mumbai offering expert haircuts, beauty, grooming and bridal services for men, women and kids.">
+    <meta name="description" content="STUDIO 13 FAMILY SALON is a premium family salon in Navi Mumbai offering expert haircuts, beauty, grooming and bridal services for men, women and kids.">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -49,6 +46,7 @@
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s;
         }
 
         nav a:hover {
@@ -87,6 +85,11 @@
             margin: 10px;
             background: #c9a24d;
             color: #111;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #b18e3f;
         }
 
         .btn-outline {
@@ -136,12 +139,15 @@
 
         .location-box {
             background: #1c1c1c;
+            color: #fff;
+            padding: 20px;
         }
 
         .final-cta {
             background: linear-gradient(135deg, #111, #333);
             color: #fff;
             text-align: center;
+            padding: 70px 0;
         }
 
         .site-footer {
@@ -154,6 +160,30 @@
         .site-footer a {
             color: #c9a24d;
             text-decoration: none;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
         }
 
         @media (max-width: 768px) {
@@ -243,6 +273,11 @@
         </a>
     </p>
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917506961313" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
