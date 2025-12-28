@@ -18,8 +18,24 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%);
+            background: linear-gradient(135deg, #f2f2f2 0%, #e0e0e0 50%, #d9d9d9 100%);
             color: #222;
+            position: relative;
+        }
+
+        /* Subtle background pattern for theme */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 20% 80%, rgba(201, 162, 77, 0.1) 0%, transparent 50%),
+                              radial-gradient(circle at 80% 20%, rgba(201, 162, 77, 0.1) 0%, transparent 50%);
+            background-size: 400px 400px;
+            z-index: -1;
+            pointer-events: none;
         }
 
         .container {
@@ -32,6 +48,7 @@
             background: #111;
             padding: 20px 0;
             border-bottom: 3px solid #c9a24d;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
         .site-header h1 {
@@ -39,6 +56,7 @@
             color: #c9a24d;
             font-size: 2.5em;
             margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         nav {
@@ -50,10 +68,12 @@
             margin: 0 18px;
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
             color: #c9a24d;
+            transform: scale(1.05);
         }
 
         .hero {
@@ -64,14 +84,30 @@
             color: #fff;
             padding: 90px 0;
             text-align: center;
+            position: relative;
         }
 
-        section { padding: 70px 0; }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #c9a24d, #fff, #c9a24d);
+        }
+
+        section {
+            padding: 70px 0;
+            border-bottom: 1px solid #ddd; /* Finishing border line for sections */
+        }
 
         h2 {
             text-align: center;
             font-size: 2.4em;
             margin-bottom: 30px;
+            color: #c9a24d;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
         .grid {
@@ -89,11 +125,23 @@
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0; /* Subtle border for boxes */
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
 
         .services-preview img {
             width: 100%;
             border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .services-preview img:hover {
+            transform: scale(1.05);
         }
 
         .btn {
@@ -105,12 +153,24 @@
             background: #c9a24d;
             color: #111;
             margin: 10px;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            background: #b8943d;
+            transform: translateY(-2px);
         }
 
         .btn-outline {
             background: transparent;
             border: 2px solid #c9a24d;
             color: #c9a24d;
+        }
+
+        .btn-outline:hover {
+            background: #c9a24d;
+            color: #111;
         }
 
         .locations {
@@ -121,6 +181,7 @@
         .location-box {
             background: #1c1c1c;
             color: #fff;
+            border: 1px solid #333;
         }
 
         .final-cta {
@@ -134,6 +195,7 @@
             color: #fff;
             text-align: center;
             padding: 30px 0;
+            border-top: 3px solid #c9a24d;
         }
 
         .site-footer a {
@@ -157,6 +219,11 @@
             width: 50%;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-us img:hover {
+            transform: scale(1.02);
         }
 
         .about-us .text {
@@ -227,7 +294,7 @@
     <h2>Our Popular Services</h2>
     <div class="grid">
         <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Haircuts & Styling">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=400&q=80" alt="Haircuts & Styling">
             <h3>Haircuts & Styling</h3>
             <p>Modern styles for all ages, from trendy cuts to elegant updos.</p>
         </div>
@@ -237,22 +304,22 @@
             <p>Highlights, balayage, keratin, and color services for vibrant hair.</p>
         </div>
         <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="Men’s Grooming">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Men’s Grooming">
             <h3>Men’s Grooming</h3>
             <p>Beard trims, shaves, facials, and head massages for the modern man.</p>
         </div>
         <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=400&q=80" alt="Skin & Beauty Care">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80" alt="Skin & Beauty Care">
             <h3>Skin & Beauty Care</h3>
             <p>Facials, threading, waxing, and body polishing for radiant skin.</p>
         </div>
         <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=400&q=80" alt="Hands & Feet Care">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=400&q=80" alt="Hands & Feet Care">
             <h3>Hands & Feet Care</h3>
             <p>Manicures, pedicures, nail art, and extensions for perfect nails.</p>
         </div>
         <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=400&q=80" alt="Bridal & Makeup Services">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal & Makeup Services">
             <h3>Bridal & Makeup Services</h3>
             <p>Complete bridal packages, HD makeup, and special occasion styling.</p>
         </div>
