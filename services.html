@@ -110,10 +110,30 @@
             padding: 8px 0;
             border-bottom: 1px dotted #bbb;
             font-size: 0.95em;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .service-box ul li:hover {
+            color: #c9a24d;
         }
 
         .service-box ul li:last-child {
             border-bottom: none;
+        }
+
+        .service-description {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #444;
+        }
+
+        .service-description.show {
+            display: block;
         }
 
         /* CTA */
@@ -178,7 +198,7 @@
         <p>
             We offer a complete range of premium salon services designed for men,
             women and children. Every service is delivered with care, hygiene
-            and professional expertise.
+            and professional expertise. Click on any service to learn more.
         </p>
 
         <div class="services-grid">
@@ -186,84 +206,120 @@
             <div class="service-box">
                 <h3>Hair Services</h3>
                 <ul>
-                    <li>Men, Women & Kids Haircuts</li>
-                    <li>Hair Wash & Blow Dry</li>
-                    <li>Hair Styling & Ironing</li>
-                    <li>Global Hair Coloring</li>
-                    <li>Highlights & Balayage</li>
-                    <li>Keratin & Smoothening</li>
-                    <li>Hair Spa & Repair Treatments</li>
+                    <li onclick="toggleDescription('hair1')">Men, Women & Kids Haircuts</li>
+                    <div id="hair1" class="service-description">Professional haircuts tailored for all ages, using modern techniques and premium tools for a perfect finish.</div>
+                    <li onclick="toggleDescription('hair2')">Hair Wash & Blow Dry</li>
+                    <div id="hair2" class="service-description">Gentle hair wash with nourishing products followed by expert blow drying for volume and shine.</div>
+                    <li onclick="toggleDescription('hair3')">Hair Styling & Ironing</li>
+                    <div id="hair3" class="service-description">Creative styling and ironing services to achieve your desired look, from straight to wavy.</div>
+                    <li onclick="toggleDescription('hair4')">Global Hair Coloring</li>
+                    <div id="hair4" class="service-description">High-quality hair coloring using global brands for vibrant, long-lasting results.</div>
+                    <li onclick="toggleDescription('hair5')">Highlights & Balayage</li>
+                    <div id="hair5" class="service-description">Subtle or bold highlights and balayage techniques for natural, sun-kissed effects.</div>
+                    <li onclick="toggleDescription('hair6')">Keratin & Smoothening</li>
+                    <div id="hair6" class="service-description">Keratin treatments for smooth, frizz-free hair that lasts for months.</div>
+                    <li onclick="toggleDescription('hair7')">Hair Spa & Repair Treatments</li>
+                    <div id="hair7" class="service-description">Deep conditioning spa treatments to repair damaged hair and restore health.</div>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Men’s Grooming</h3>
                 <ul>
-                    <li>Beard Trim & Styling</li>
-                    <li>Classic & Modern Shaving</li>
-                    <li>Men’s Facial Treatments</li>
-                    <li>Head Massage</li>
-                    <li>Hair Fall & Scalp Treatments</li>
+                    <li onclick="toggleDescription('men1')">Beard Trim & Styling</li>
+                    <div id="men1" class="service-description">Precise beard trimming and styling to enhance your facial features.</div>
+                    <li onclick="toggleDescription('men2')">Classic & Modern Shaving</li>
+                    <div id="men2" class="service-description">Traditional or contemporary shaving techniques for a clean, comfortable shave.</div>
+                    <li onclick="toggleDescription('men3')">Men’s Facial Treatments</li>
+                    <div id="men3" class="service-description">Specialized facials to cleanse, exfoliate, and rejuvenate men's skin.</div>
+                    <li onclick="toggleDescription('men4')">Head Massage</li>
+                    <div id="men4" class="service-description">Relaxing head massages to relieve stress and improve scalp health.</div>
+                    <li onclick="toggleDescription('men5')">Hair Fall & Scalp Treatments</li>
+                    <div id="men5" class="service-description">Targeted treatments to combat hair loss and nourish the scalp.</div>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Skin & Beauty Care</h3>
                 <ul>
-                    <li>Advanced Facials (All Skin Types)</li>
-                    <li>Clean-Up & Bleach</li>
-                    <li>Threading & Eyebrow Shaping</li>
-                    <li>Waxing (Full / Half Body)</li>
-                    <li>Body Polishing & Glow Therapy</li>
+                    <li onclick="toggleDescription('skin1')">Advanced Facials (All Skin Types)</li>
+                    <div id="skin1" class="service-description">Customized facials using advanced techniques for all skin types, leaving your skin glowing.</div>
+                    <li onclick="toggleDescription('skin2')">Clean-Up & Bleach</li>
+                    <div id="skin2" class="service-description">Deep cleansing and bleaching services to remove impurities and even skin tone.</div>
+                    <li onclick="toggleDescription('skin3')">Threading & Eyebrow Shaping</li>
+                    <div id="skin3" class="service-description">Precise threading for perfectly shaped eyebrows and facial hair removal.</div>
+                    <li onclick="toggleDescription('skin4')">Waxing (Full / Half Body)</li>
+                    <div id="skin4" class="service-description">Smooth waxing services for full or half body, using gentle, effective methods.</div>
+                    <li onclick="toggleDescription('skin5')">Body Polishing & Glow Therapy</li>
+                    <div id="skin5" class="service-description">Exfoliating body polishes and glow therapies for soft, radiant skin.</div>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Hands & Feet Care</h3>
                 <ul>
-                    <li>Classic Manicure</li>
-                    <li>Pedicure Treatments</li>
-                    <li>Spa Pedicure</li>
-                    <li>Nail Art & Design</li>
-                    <li>Nail Extensions</li>
+                    <li onclick="toggleDescription('hands1')">Classic Manicure</li>
+                    <div id="hands1" class="service-description">Traditional manicure to clean, shape, and polish your nails for a neat appearance.</div>
+                    <li onclick="toggleDescription('hands2')">Pedicure Treatments</li>
+                    <div id="hands2" class="service-description">Comprehensive pedicure for soft, healthy feet and beautiful nails.</div>
+                    <li onclick="toggleDescription('hands3')">Spa Pedicure</li>
+                    <div id="hands3" class="service-description">Luxurious spa pedicure with soaking, exfoliation, and massage for ultimate relaxation.</div>
+                    <li onclick="toggleDescription('hands4')">Nail Art & Design</li>
+                    <div id="hands4" class="service-description">Creative nail art and designs to express your style and personality.</div>
+                    <li onclick="toggleDescription('hands5')">Nail Extensions</li>
+                    <div id="hands5" class="service-description">High-quality nail extensions for length and strength, with custom designs.</div>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Makeup Services</h3>
                 <ul>
-                    <li>Party Makeup</li>
-                    <li>HD & Professional Makeup</li>
-                    <li>Engagement Makeup</li>
-                    <li>Reception Makeup</li>
+                    <li onclick="toggleDescription('makeup1')">Party Makeup</li>
+                    <div id="makeup1" class="service-description">Fun and glamorous makeup for parties, ensuring you look stunning all night.</div>
+                    <li onclick="toggleDescription('makeup2')">HD & Professional Makeup</li>
+                    <div id="makeup2" class="service-description">High-definition makeup for photoshoots and events, camera-ready perfection.</div>
+                    <li onclick="toggleDescription('makeup3')">Engagement Makeup</li>
+                    <div id="makeup3" class="service-description">Elegant makeup for engagement ceremonies, highlighting your natural beauty.</div>
+                    <li onclick="toggleDescription('makeup4')">Reception Makeup</li>
+                    <div id="makeup4" class="service-description">Sophisticated reception makeup for a polished, memorable look.</div>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Bridal Services</h3>
                 <ul>
-                    <li>Bridal Makeup</li>
-                    <li>Bridal Hairstyling</li>
-                    <li>Mehndi</li>
-                    <li>Complete Bridal Packages</li>
+                    <li onclick="toggleDescription('bridal1')">Bridal Makeup</li>
+                    <div id="bridal1" class="service-description">Flawless bridal makeup tailored to your wedding theme and personal style.</div>
+                    <li onclick="toggleDescription('bridal2')">Bridal Hairstyling</li>
+                    <div id="bridal2" class="service-description">Beautiful hairstyling for brides, from traditional to modern designs.</div>
+                    <li onclick="toggleDescription('bridal3')">Mehndi</li>
+                    <div id="bridal3" class="service-description">Intricate mehndi designs for hands and feet, adding cultural elegance.</div>
+                    <li onclick="toggleDescription('bridal4')">Complete Bridal Packages</li>
+                    <div id="bridal4" class="service-description">All-inclusive packages combining makeup, hair, and mehndi for your special day.</div>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Kids & Family</h3>
                 <ul>
-                    <li>Kids Haircuts</li>
-                    <li>Family Grooming Packages</li>
-                    <li>Special Occasion Styling</li>
+                    <li onclick="toggleDescription('kids1')">Kids Haircuts</li>
+                    <div id="kids1" class="service-description">Fun and gentle haircuts for children, in a comfortable, family-friendly environment.</div>
+                    <li onclick="toggleDescription('kids2')">Family Grooming Packages</li>
+                    <div id="kids2" class="service-description">Discounted packages for the whole family, covering haircuts and basic grooming.</div>
+                    <li onclick="toggleDescription('kids3')">Special Occasion Styling</li>
+                    <div id="kids3" class="service-description">Styling for birthdays, festivals, and events, making kids look their best.</div>
                 </ul>
             </div>
 
             <div class="service-box">
                 <h3>Relaxation Therapies</h3>
                 <ul>
-                    <li>Head Massage</li>
-                    <li>Body Massage</li>
-                    <li>Stress Relief Treatments</li>
+                    <li onclick="toggleDescription('relax1')">Head Massage</li>
+                    <div id="relax1" class="service-description">Soothing head massages to relieve tension and promote relaxation.</div>
+                    <li onclick="toggleDescription('relax2')">Body Massage</li>
+                    <div id="relax2" class="service-description">Full-body massages using aromatic oils for stress relief and muscle relaxation.</div>
+                    <li onclick="toggleDescription('relax3')">Stress Relief Treatments</li>
+                    <div id="relax3" class="service-description">Specialized treatments combining massage and aromatherapy for ultimate stress relief.</div>
                 </ul>
             </div>
 
@@ -284,6 +340,13 @@
         </a>
     </p>
 </footer>
+
+<script>
+    function toggleDescription(id) {
+        const desc = document.getElementById(id);
+        desc.classList.toggle('show');
+    }
+</script>
 
 </body>
 </html>
