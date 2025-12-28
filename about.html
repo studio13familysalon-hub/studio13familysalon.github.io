@@ -141,8 +141,46 @@
             text-decoration: none;
         }
 
+        /* About Us Section */
+        .about-us {
+            background: #fff;
+            padding: 70px 0;
+        }
+
+        .about-us .container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .about-us img {
+            width: 50%;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .about-us .text {
+            flex: 1;
+        }
+
+        .about-us h2 {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
         @media (max-width: 768px) {
             h2 { font-size: 2em; }
+            .about-us .container {
+                flex-direction: column;
+            }
+            .about-us img {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -171,19 +209,56 @@
     </div>
 </section>
 
+<section class="about-us">
+    <div class="container">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=600&q=80" alt="STUDIO 13 FAMILY SALON Interior">
+        <div class="text">
+            <h2>About Us – STUDIO 13 FAMILY SALON</h2>
+            <p>Founded in 2014, STUDIO 13 FAMILY SALON has been a trusted destination for families in Navi Mumbai seeking premium hair, beauty, and grooming services. With years of experience, our dedicated team of skilled professionals combines creativity, expertise, and personalized care to deliver exceptional results for men, women, and children alike.</p>
+            <p>We proudly operate two branches in Navi Mumbai – Sanpada and Nerul – each designed to offer a comfortable, modern, and hygienic environment where every client can relax and enjoy a luxurious salon experience.</p>
+            <p>At STUDIO 13, we believe that every client deserves not only a stylish look but also a personalized and enjoyable salon experience. We use premium products from world-renowned brands like L’Oréal and Kérastase, ensuring your hair and skin receive the best care possible. Our partnerships with these brands reflect our commitment to quality and excellence in every service we offer.</p>
+            <p>From trendy haircuts and hair coloring to professional bridal services and beauty treatments, we tailor every service to suit your unique style and needs. Our mission is to enhance confidence, style, and well-being for every family member who walks through our doors.</p>
+            <p>Experience the difference at STUDIO 13 FAMILY SALON – where style meets care, and every visit is a celebration of beauty and confidence.</p>
+        </div>
+    </div>
+</section>
+
 <section class="services-preview container">
     <h2>Our Popular Services</h2>
     <div class="grid">
         <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Haircuts">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Haircuts & Styling">
             <h3>Haircuts & Styling</h3>
-            <p>Modern styles for all ages.</p>
+            <p>Modern styles for all ages, from trendy cuts to elegant updos.</p>
         </div>
         <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair Coloring">
-            <h3>Hair Coloring</h3>
-            <p>Highlights & treatments.</p>
+            <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair Coloring & Treatments">
+            <h3>Hair Coloring & Treatments</h3>
+            <p>Highlights, balayage, keratin, and color services for vibrant hair.</p>
         </div>
+        <div class="service-box">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="Men’s Grooming">
+            <h3>Men’s Grooming</h3>
+            <p>Beard trims, shaves, facials, and head massages for the modern man.</p>
+        </div>
+        <div class="service-box">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=400&q=80" alt="Skin & Beauty Care">
+            <h3>Skin & Beauty Care</h3>
+            <p>Facials, threading, waxing, and body polishing for radiant skin.</p>
+        </div>
+        <div class="service-box">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=400&q=80" alt="Hands & Feet Care">
+            <h3>Hands & Feet Care</h3>
+            <p>Manicures, pedicures, nail art, and extensions for perfect nails.</p>
+        </div>
+        <div class="service-box">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=400&q=80" alt="Bridal & Makeup Services">
+            <h3>Bridal & Makeup Services</h3>
+            <p>Complete bridal packages, HD makeup, and special occasion styling.</p>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px;">
+        <a href="services.html" class="btn">View All Services</a>
     </div>
 </section>
 
