@@ -64,7 +64,7 @@
                 rgba(0,0,0,0.7),
                 rgba(0,0,0,0.7)
             ),
-            url("https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
+            url("https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80");
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -225,6 +225,37 @@
             margin-bottom: 10px;
         }
 
+        /* CONTACT */
+        .contact {
+            background: #f8f8f8;
+        }
+
+        .contact .grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            background: #c9a24d;
+            color: #111;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
         /* FINAL CTA */
         .final-cta {
             background: linear-gradient(135deg, #111 0%, #333 100%);
@@ -253,6 +284,10 @@
             .hero h2 {
                 font-size: 2.2em;
             }
+
+            .contact .grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -277,7 +312,7 @@
         <h2>Style, Care & Confidence for the Whole Family</h2>
         <p>
             Premium hair, beauty and grooming services for men, women and kids
-            in Sanpada & Nerul, Navi Mumbai.
+            in Sanpada, Nerul , Navi Mumbai.
         </p>
 
         <div class="hero-buttons">
@@ -324,7 +359,7 @@
             <div class="feature-box">
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>Prime Locations</h3>
-                <p>Conveniently located in Sanpada & Nerul.</p>
+                <p>Conveniently located in Sanpada, Nerul.</p>
             </div>
         </div>
     </div>
@@ -371,6 +406,11 @@
                 <h3>Nerul</h3>
                 <p>Navi Mumbai</p>
             </div>
+            <div class="location-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Vashi</h3>
+                <p>Navi Mumbai</p>
+            </div>
         </div>
     </div>
 </section>
@@ -393,6 +433,30 @@
                 <i class="fas fa-quote-left"></i>
                 <p>“Bridal makeup was perfect. Thank you STUDIO 13!”</p>
                 <strong>– Happy Bride</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><i class="fas fa-phone"></i> +91 7506961313</p>
+                <p><i class="fas fa-envelope"></i> studio13familysalon@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Sanpada, Nerul  Navi Mumbai</p>
+                <p><i class="fas fa-clock"></i> Mon-Sun: 10AM - 9PM</p>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form action="#" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
             </div>
         </div>
     </div>
