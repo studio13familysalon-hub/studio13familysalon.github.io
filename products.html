@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STUDIO 13 FAMILY SALON | Premium Family Salon in Navi Mumbai</title>
+
+    <meta name="description"
+          content="STUDIO 13 FAMILY SALON is a premium family salon in Navi Mumbai offering expert haircuts, beauty, grooming & bridal services for men, women & kids.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f2f2f2 0%, #d9d9d9 100%);
+            color: #222;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .site-header {
+            background: #111;
+            padding: 20px 0;
+            border-bottom: 3px solid #c9a24d;
+        }
+
+        .site-header h1 {
+            text-align: center;
+            color: #c9a24d;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 18px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            color: #c9a24d;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+            url("https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 90px 0;
+            text-align: center;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.4em;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-box,
+        .service-box,
+        .testimonial-box,
+        .location-box,
+        .product-box {
+            background: #f8f8f8;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-box img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .price {
+            color: #c9a24d;
+            font-size: 1.2em;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            background: #c9a24d;
+            color: #111;
+            margin-top: 10px;
+        }
+
+        .locations {
+            background: #111;
+            color: #fff;
+        }
+
+        .final-cta {
+            background: linear-gradient(135deg, #111, #333);
+            color: #fff;
+            text-align: center;
+        }
+
+        .site-footer {
+            background: #111;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .site-footer a {
+            color: #c9a24d;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h2 { font-size: 2em; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container">
+        <h1>STUDIO 13 FAMILY SALON</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Shop</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2>Style, Care & Confidence for the Whole Family</h2>
+        <p>Premium salon services in Navi Mumbai</p>
+        <a href="contact.html" class="btn">Book Appointment</a>
+    </div>
+</section>
+
+<section class="products-preview container">
+    <h2>Shop Our Products</h2>
+    <div class="grid">
+        <div class="product-box">
+            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80">
+            <h3>Premium Shampoo</h3>
+            <div class="price">₹500</div>
+        </div>
+        <div class="product-box">
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80">
+            <h3>Hair Color Kit</h3>
+            <div class="price">₹800</div>
+        </div>
+    </div>
+</section>
+
+<section class="final-cta">
+    <div class="container">
+        <h2>Ready to Transform Your Look?</h2>
+        <a href="contact.html" class="btn">Book Appointment</a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2025 STUDIO 13 FAMILY SALON. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
