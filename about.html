@@ -3,17 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>STUDIO 13 FAMILY SALON | Premium Family Salon in Navi Mumbai</title>
-
-    <meta name="description"
-          content="STUDIO 13 FAMILY SALON is a premium family salon in Navi Mumbai offering expert haircuts, beauty, grooming & bridal services for men, women & kids.">
-
+    <meta name="description" content="STUDIO 13 FAMILY SALON is a premium family salon in Navi Mumbai offering expert haircuts, beauty, grooming & bridal services for men, women & kids.">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
-
     <style>
         body {
             margin: 0;
@@ -22,7 +16,6 @@
             color: #222;
             position: relative;
         }
-
         /* Subtle background pattern for theme */
         body::before {
             content: '';
@@ -37,20 +30,17 @@
             z-index: -1;
             pointer-events: none;
         }
-
         .container {
             width: 90%;
             max-width: 1200px;
             margin: auto;
         }
-
         .site-header {
             background: #111;
             padding: 20px 0;
             border-bottom: 3px solid #c9a24d;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
-
         .site-header h1 {
             text-align: center;
             color: #c9a24d;
@@ -58,11 +48,9 @@
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-
         nav {
             text-align: center;
         }
-
         nav a {
             color: #fff;
             margin: 0 18px;
@@ -70,12 +58,10 @@
             font-weight: 600;
             transition: color 0.3s ease;
         }
-
         nav a:hover {
             color: #c9a24d;
             transform: scale(1.05);
         }
-
         .hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
             url("https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=1600&q=80");
@@ -86,7 +72,6 @@
             text-align: center;
             position: relative;
         }
-
         .hero::after {
             content: '';
             position: absolute;
@@ -96,12 +81,10 @@
             height: 5px;
             background: linear-gradient(to right, #c9a24d, #fff, #c9a24d);
         }
-
         section {
             padding: 70px 0;
             border-bottom: 1px solid #ddd; /* Finishing border line for sections */
         }
-
         h2 {
             text-align: center;
             font-size: 2.4em;
@@ -109,13 +92,11 @@
             color: #c9a24d;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
-
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
             gap: 25px;
         }
-
         .feature-box,
         .service-box,
         .testimonial-box,
@@ -128,22 +109,18 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border: 1px solid #e0e0e0; /* Subtle border for boxes */
         }
-
         .service-box:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
-
         .services-preview img {
             width: 100%;
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
-
         .services-preview img:hover {
             transform: scale(1.05);
         }
-
         .btn {
             display: inline-block;
             padding: 14px 30px;
@@ -156,40 +133,33 @@
             transition: background 0.3s ease, transform 0.3s ease;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-
         .btn:hover {
             background: #b8943d;
             transform: translateY(-2px);
         }
-
         .btn-outline {
             background: transparent;
             border: 2px solid #c9a24d;
             color: #c9a24d;
         }
-
         .btn-outline:hover {
             background: #c9a24d;
             color: #111;
         }
-
         .locations {
             background: #111;
             color: #fff;
         }
-
         .location-box {
             background: #1c1c1c;
             color: #fff;
             border: 1px solid #333;
         }
-
         .final-cta {
             background: linear-gradient(135deg, #111, #333);
             color: #fff;
             text-align: center;
         }
-
         .site-footer {
             background: #111;
             color: #fff;
@@ -197,49 +167,40 @@
             padding: 30px 0;
             border-top: 3px solid #c9a24d;
         }
-
         .site-footer a {
             color: #c9a24d;
             text-decoration: none;
         }
-
         /* About Us Section */
         .about-us {
             background: #fff;
             padding: 70px 0;
         }
-
         .about-us .container {
             display: flex;
             align-items: center;
             gap: 40px;
         }
-
         .about-us img {
             width: 50%;
             border-radius: 12px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
-
         .about-us img:hover {
             transform: scale(1.02);
         }
-
         .about-us .text {
             flex: 1;
         }
-
         .about-us h2 {
             text-align: left;
             margin-bottom: 20px;
         }
-
         .about-us p {
             line-height: 1.6;
             margin-bottom: 15px;
         }
-
         @media (max-width: 768px) {
             h2 { font-size: 2em; }
             .about-us .container {
@@ -251,129 +212,102 @@
         }
     </style>
 </head>
-
 <body>
-
-<header class="site-header">
-    <div class="container">
-        <h1>STUDIO 13 FAMILY SALON</h1>
-        <nav aria-label="Main Navigation">
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
-            <a href="services.html"><i class="fas fa-cut"></i> Services</a>
-            <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
-            <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
-        </nav>
-    </div>
-</header>
-
-<section class="hero">
-    <div class="container">
-        <h2>Style, Care & Confidence for the Whole Family</h2>
-        <p>Premium salon services in Sanpada & Nerul, Navi Mumbai</p>
-        <a href="contact.html" class="btn">Book Appointment</a>
-        <a href="services.html" class="btn btn-outline">View Services</a>
-    </div>
-</section>
-
-<section class="about-us">
-    <div class="container">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="STUDIO 13 FAMILY SALON Interior">
-        <div class="text">
-            <h2>About Us – STUDIO 13 FAMILY SALON</h2>
-            <p>Founded in 2014, STUDIO 13 FAMILY SALON has been a trusted destination for families in Navi Mumbai seeking premium hair, beauty, and grooming services. With years of experience, our dedicated team of skilled professionals combines creativity, expertise, and personalized care to deliver exceptional results for men, women, and children alike.</p>
-            <p>We proudly operate two branches in Navi Mumbai – Sanpada and Nerul – each designed to offer a comfortable, modern, and hygienic environment where every client can relax and enjoy a luxurious salon experience.</p>
-            <p>At STUDIO 13, we believe that every client deserves not only a stylish look but also a personalized and enjoyable salon experience. We use premium products from world-renowned brands like L’Oréal and Kérastase, ensuring your hair and skin receive the best care possible. Our partnerships with these brands reflect our commitment to quality and excellence in every service we offer.</p>
-            <p>From trendy haircuts and hair coloring to professional bridal services and beauty treatments, we tailor every service to suit your unique style and needs. Our mission is to enhance confidence, style, and well-being for every family member who walks through our doors.</p>
-            <p>Experience the difference at STUDIO 13 FAMILY SALON – where style meets care, and every visit is a celebration of beauty and confidence.</p>
+    <header class="site-header">
+        <div class="container">
+            <h1>STUDIO 13 FAMILY SALON</h1>
+            <nav aria-label="Main Navigation">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="services.html"><i class="fas fa-cut"></i> Services</a>
+                <a href="gallery.html"><i class="fas fa-images"></i> Gallery</a>
+                <a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+            </nav>
         </div>
-    </div>
-</section>
-
-<section class="services-preview container">
-    <h2>Our Popular Services</h2>
-    <div class="grid">
-        <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=400&q=80" alt="Haircuts & Styling">
-            <h3>Haircuts & Styling</h3>
-            <p>Modern styles for all ages, from trendy cuts to elegant updos.</p>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h2>Style, Care & Confidence for the Whole Family</h2>
+            <p>Premium salon services in Sanpada & Nerul, Navi Mumbai</p>
+            <a href="contact.html" class="btn">Book Appointment</a>
+            <a href="services.html" class="btn btn-outline">View Services</a>
         </div>
-        <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair Coloring & Treatments">
-            <h3>Hair Coloring & Treatments</h3>
-            <p>Highlights, balayage, keratin, and color services for vibrant hair.</p>
+    </section>
+    <section class="about-us">
+        <div class="container">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" alt="STUDIO 13 FAMILY SALON Interior">
+            <div class="text">
+                <h2>About Us – STUDIO 13 FAMILY SALON</h2>
+                <p>Founded in 2014, STUDIO 13 FAMILY SALON has been a trusted destination for families in Navi Mumbai seeking premium hair, beauty, and grooming services. With years of experience, our dedicated team of skilled professionals combines creativity, expertise, and personalized care to deliver exceptional results for men, women, and children alike.</p>
+                <p>We proudly operate two branches in Navi Mumbai – Sanpada and Nerul – each designed to offer a comfortable, modern, and hygienic environment where every client can relax and enjoy a luxurious salon experience.</p>
+                <p>At STUDIO 13, we believe that every client deserves not only a stylish look but also a personalized and enjoyable salon experience. We use premium products from world-renowned brands like L’Oréal and Kérastase, ensuring your hair and skin receive the best care possible. Our partnerships with these brands reflect our commitment to quality and excellence in every service we offer.</p>
+                <p>From trendy haircuts and hair coloring to professional bridal services and beauty treatments, we tailor every service to suit your unique style and needs. Our mission is to enhance confidence, style, and well-being for every family member who walks through our doors.</p>
+                <p>Experience the difference at STUDIO 13 FAMILY SALON – where style meets care, and every visit is a celebration of beauty and confidence.</p>
+            </div>
         </div>
-        <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Men’s Grooming">
-            <h3>Men’s Grooming</h3>
-            <p>Beard trims, shaves, facials, and head massages for the modern man.</p>
-        </div>
-        <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=400&q=80" alt="Skin & Beauty Care">
-            <h3>Skin & Beauty Care</h3>
-            <p>Facials, threading, waxing, and body polishing for radiant skin.</p>
-        </div>
-        <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=400&q=80" alt="Hands & Feet Care">
-            <h3>Hands & Feet Care</h3>
-            <p>Manicures, pedicures, nail art, and extensions for perfect nails.</p>
-        </div>
-        <div class="service-box">
-            <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal & Makeup Services">
-            <h3>Bridal & Makeup Services</h3>
-            <p>Complete bridal packages, HD makeup, and special occasion styling.</p>
-        </div>
-    </div>
-    <div style="text-align: center; margin-top: 30px;">
-        <a href="services.html" class="btn">View All Services</a>
-    </div>
-</section>
-
-<section class="locations">
-    <div class="container">
-        <h2>Our Locations</h2>
+    </section>
+    <section class="services-preview container">
+        <h2>Our Popular Services</h2>
         <div class="grid">
-
-            <div class="location-box">
-                <h3>Sanpada</h3>
-                <a class="btn btn-outline"
-                   href="https://www.google.com/maps/search/?api=1&query=Studio+13+Family+Salon+Sanpada+Navi+Mumbai"
-                   target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-directions"></i> Get Directions
-                </a>
+            <div class="service-box">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80" alt="Haircuts & Styling">
+                <h3>Haircuts & Styling</h3>
+                <p>Modern styles for all ages, from trendy cuts to elegant updos.</p>
             </div>
-
-            <div class="location-box">
-                <h3>Nerul</h3>
-                <a class="btn btn-outline"
-                   href="https://www.google.com/maps/search/?api=1&query=Studio+13+Family+Salon+Nerul+Navi+Mumbai"
-                   target="_blank" rel="noopener noreferrer">
-                    <i class="fas fa-directions"></i> Get Directions
-                </a>
+            <div class="service-box">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair Coloring & Treatments">
+                <h3>Hair Coloring & Treatments</h3>
+                <p>Highlights, balayage, keratin, and color services for vibrant hair.</p>
             </div>
-
+            <div class="service-box">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=400&q=80" alt="Hands & Feet Care">
+                <h3>Hands & Feet Care</h3>
+                <p>Manicures, pedicures, nail art, and extensions for perfect nails.</p>
+            </div>
+            <div class="service-box">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal & Makeup Services">
+                <h3>Bridal & Makeup Services</h3>
+                <p>Complete bridal packages, HD makeup, and special occasion styling.</p>
+            </div>
         </div>
-    </div>
-</section>
-
-<section class="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p><i class="fas fa-phone"></i> <a href="tel:+917506961313">+91 75069 61313</a></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:studio13familysalon@gmail.com">studio13familysalon@gmail.com</a></p>
-    </div>
-</section>
-
-<section class="final-cta">
-    <div class="container">
-        <h2>Ready for a Fresh Look?</h2>
-        <a href="contact.html" class="btn">Book Now</a>
-    </div>
-</section>
-
-<footer class="site-footer">
-    <p>© 2025 STUDIO 13 FAMILY SALON | Navi Mumbai</p>
-</footer>
-
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="services.html" class="btn">View All Services</a>
+        </div>
+    </section>
+    <section class="locations">
+        <div class="container">
+            <h2>Our Locations</h2>
+            <div class="grid">
+                <div class="location-box">
+                    <h3>Sanpada</h3>
+                    <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Studio+13+Family+Salon+Sanpada+Navi+Mumbai" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+                <div class="location-box">
+                    <h3>Nerul</h3>
+                    <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Studio+13+Family+Salon+Nerul+Navi+Mumbai" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-directions"></i> Get Directions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p><i class="fas fa-phone"></i> <a href="tel:+917506961313">+91 75069 61313</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:studio13familysalon@gmail.com">studio13familysalon@gmail.com</a></p>
+        </div>
+    </section>
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready for a Fresh Look?</h2>
+            <a href="contact.html" class="btn">Book Now</a>
+        </div>
+    </section>
+    <footer class="site-footer">
+        <p>© 2025 STUDIO 13 FAMILY SALON | Navi Mumbai</p>
+    </footer>
 </body>
 </html>
