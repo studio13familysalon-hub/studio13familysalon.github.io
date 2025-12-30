@@ -201,6 +201,53 @@
             line-height: 1.6;
             margin-bottom: 15px;
         }
+        /* Services Details */
+        details {
+            cursor: pointer;
+        }
+        details summary {
+            list-style: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #c9a24d;
+            margin-bottom: 10px;
+        }
+        details summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary::after {
+            content: ' +';
+            float: right;
+            font-size: 1.5em;
+            color: #c9a24d;
+        }
+        details[open] summary::after {
+            content: ' -';
+        }
+        details p {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        details ul {
+            text-align: left;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        details ul li {
+            margin-bottom: 5px;
+        }
+        /* Contact Section */
+        .contact {
+            background: #111;
+            color: #fff;
+        }
+        .contact a {
+            color: #c9a24d;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 768px) {
             h2 { font-size: 2em; }
             .about-us .container {
@@ -251,23 +298,63 @@
         <div class="grid">
             <div class="service-box">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80" alt="Haircuts & Styling">
-                <h3>Haircuts & Styling</h3>
-                <p>Modern styles for all ages, from trendy cuts to elegant updos.</p>
+                <details>
+                    <summary>Haircuts & Styling</summary>
+                    <p>Modern styles for all ages, from trendy cuts to elegant updos.</p>
+                    <p>Our expert stylists provide personalized haircuts and styling services tailored to your preferences. Whether you're looking for a fresh, modern look or a classic style, we ensure every cut is precise and every style lasts.</p>
+                    <ul>
+                        <li>Men's Haircuts</li>
+                        <li>Women's Haircuts</li>
+                        <li>Kids' Haircuts</li>
+                        <li>Updos and Braiding</li>
+                        <li>Blowouts and Straightening</li>
+                    </ul>
+                </details>
             </div>
             <div class="service-box">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair Coloring & Treatments">
-                <h3>Hair Coloring & Treatments</h3>
-                <p>Highlights, balayage, keratin, and color services for vibrant hair.</p>
+                <details>
+                    <summary>Hair Coloring & Treatments</summary>
+                    <p>Highlights, balayage, keratin, and color services for vibrant hair.</p>
+                    <p>Transform your hair with our professional coloring and treatment services. We use high-quality products to achieve vibrant, long-lasting colors and healthy, nourished hair.</p>
+                    <ul>
+                        <li>Hair Coloring</li>
+                        <li>Highlights and Balayage</li>
+                        <li>Keratin Treatments</li>
+                        <li>Hair Spa and Conditioning</li>
+                        <li>Color Correction</li>
+                    </ul>
+                </details>
             </div>
             <div class="service-box">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=400&q=80" alt="Hands & Feet Care">
-                <h3>Hands & Feet Care</h3>
-                <p>Manicures, pedicures, nail art, and extensions for perfect nails.</p>
+                <details>
+                    <summary>Hands & Feet Care</summary>
+                    <p>Manicures, pedicures, nail art, and extensions for perfect nails.</p>
+                    <p>Indulge in luxurious hand and foot care with our manicure and pedicure services. From simple nail art to full extensions, we ensure your nails look flawless.</p>
+                    <ul>
+                        <li>Manicures</li>
+                        <li>Pedicures</li>
+                        <li>Nail Art</li>
+                        <li>Nail Extensions</li>
+                        <li>Paraffin Wax Treatments</li>
+                    </ul>
+                </details>
             </div>
             <div class="service-box">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal & Makeup Services">
-                <h3>Bridal & Makeup Services</h3>
-                <p>Complete bridal packages, HD makeup, and special occasion styling.</p>
+                <details>
+                    <summary>Bridal & Makeup Services</summary>
+                    <p>Complete bridal packages, HD makeup, and special occasion styling.</p>
+                    <p>Make your special day unforgettable with our comprehensive bridal and makeup services. From trial sessions to the big day, we handle everything with elegance and precision.</p>
+                    <ul>
+                        <li>Bridal Makeup</li>
+                        <li>Hair Styling for Brides</li>
+                        <li>Bridal Packages</li>
+                        <li>Special Occasion Makeup</li>
+                        <li>Mehndi and Henna Designs</li>
+                    </ul>
+                </details>
             </div>
         </div>
         <div style="text-align: center; margin-top: 30px;">
