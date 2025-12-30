@@ -1,20 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>STUDIO 13 FAMILY SALON | Premium Family Salon in Navi Mumbai</title>
 <meta name="description" content="STUDIO 13 FAMILY SALON offers premium haircuts, beauty treatments, bridal & grooming services for men, women, and kids in Sanpada & Nerul, Navi Mumbai.">
 
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(rgba(242,242,242,.9), rgba(242,242,242,.9)),
-    url("https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=1600&q=80") no-repeat center/cover fixed;
+    background: linear-gradient(rgba(242, 242, 242, 0.85), rgba(242, 242, 242, 0.85)), 
+                url("https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=1600&q=80") no-repeat center center fixed; /* Changed to a more elegant salon interior image for professionalism */
+    background-size: cover;
     color: #222;
 }
 
@@ -24,8 +26,9 @@ body {
     margin: auto;
 }
 
+/* HEADER */
 .site-header {
-    background: rgba(17,17,17,.95);
+    background: rgba(17, 17, 17, 0.9); /* Semi-transparent to let background show slightly */
     padding: 20px 0;
     border-bottom: 4px solid #c9a24d;
 }
@@ -34,6 +37,7 @@ body {
     text-align: center;
     color: #c9a24d;
     font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 nav {
@@ -42,43 +46,57 @@ nav {
 
 nav a {
     color: #fff;
-    margin: 0 16px;
+    margin: 0 18px;
     text-decoration: none;
     font-weight: 600;
+    transition: color 0.3s;
 }
 
 nav a:hover {
     color: #c9a24d;
 }
 
+/* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
-    padding: 100px 20px;
+    padding: 100px 0;
     text-align: center;
 }
 
 .hero h2 {
-    color: #c9a24d;
     font-size: 3em;
+    margin-bottom: 15px;
+    color: #c9a24d;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .hero p {
     font-size: 1.2em;
     max-width: 750px;
     margin: auto;
+    color: #e0e0e0;
 }
 
 .btn {
     display: inline-block;
     padding: 14px 30px;
     border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
     background: #c9a24d;
     color: #111;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 10px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #b18e3f;
 }
 
 .btn-outline {
@@ -87,33 +105,138 @@ nav a:hover {
     color: #c9a24d;
 }
 
+/* INTRO */
 .intro {
-    background: rgba(255,255,255,.95);
-    padding: 60px 20px;
-    border-radius: 10px;
-    margin: 30px auto;
     text-align: center;
+    padding: 60px 20px;
+    background: rgba(248, 248, 248, 0.9); /* Semi-transparent to blend with background */
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.intro p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: auto;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.feature-item i {
+    font-size: 2.5em;
+    color: #c9a24d;
+    margin-bottom: 10px;
+}
+
+.feature-item h4 {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+/* SERVICES */
+section h2 {
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 30px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 25px;
 }
 
 .service-box {
-    background: #fff;
+    background: rgba(248, 248, 248, 0.95); /* Semi-transparent for depth */
     padding: 25px;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    overflow: hidden; /* To hide expanded content initially */
 }
 
 .service-box img {
     width: 100%;
-    height: 240px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.service-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.service-box p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Expanded content styles */
+.service-details {
+    display: none; /* Hidden by default */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.service-details p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.service-details .additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.service-details .additional-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.service-details .features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.service-details .features-list li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.service-details .features-list i {
+    color: #c9a24d;
+    margin-right: 8px;
 }
 
 .toggle-btn {
@@ -124,137 +247,251 @@ nav a:hover {
     border-radius: 20px;
     cursor: pointer;
     margin-top: 10px;
+    transition: background 0.3s;
 }
 
-.service-details {
-    display: none;
-    margin-top: 15px;
-    text-align: left;
+.toggle-btn:hover {
+    background: #b18e3f;
 }
 
-.features-list {
-    list-style: none;
-    padding: 0;
+/* LOCATIONS */
+.locations {
+    background: rgba(248, 248, 248, 0.9); /* Semi-transparent */
+    color: #333;
+    padding: 70px 20px;
+    border-radius: 10px;
+    margin: 20px;
 }
 
-.features-list li i {
+.location-box {
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #c9a24d;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.location-box h3 {
+    color: #c9a24d;
+    margin-bottom: 8px;
+}
+
+.location-box p, .location-box a {
+    color: #333;
+    text-decoration: none;
+}
+
+.location-box a:hover {
+    text-decoration: underline;
     color: #c9a24d;
 }
 
+/* FINAL CTA */
+.final-cta {
+    background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(51, 51, 51, 0.9)); /* Semi-transparent */
+    color: #fff;
+    text-align: center;
+    padding: 70px 0;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.final-cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.final-cta p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
 .site-footer {
-    background: rgba(17,17,17,.95);
+    background: rgba(17, 17, 17, 0.9); /* Semi-transparent */
     color: #fff;
     text-align: center;
     padding: 30px 0;
 }
 
+.site-footer a {
+    color: #c9a24d;
+    text-decoration: none;
+}
+
+.site-footer .footer-links {
+    margin-bottom: 20px;
+}
+
+.site-footer .footer-links a {
+    margin: 0 15px;
+}
+
+.site-footer .social-media {
+    margin-top: 20px;
+}
+
+.site-footer .social-media a {
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+/* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;
-    bottom: 25px;
-    right: 25px;
     width: 60px;
     height: 60px;
-    background: #25D366;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
     color: #fff;
     border-radius: 50%;
-    font-size: 28px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .features {
+        flex-direction: column;
+    }
 }
 </style>
 </head>
-
 <body>
 
 <header class="site-header">
 <div class="container">
-<h1>STUDIO 13 FAMILY SALON</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Services</a>
-<a href="#">Gallery</a>
-<a href="#">Contact</a>
-</nav>
+    <h1>STUDIO 13 FAMILY SALON</h1>
+    <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 </div>
 </header>
 
 <section class="hero">
-<h2>Everyday style that builds confidence</h2>
-<p>Premium family salon services in Sanpada & Nerul, Navi Mumbai.</p>
-<a class="btn" href="#">Book Appointment</a>
-<a class="btn btn-outline" href="#">View Services</a>
+<div class="container">
+    <h2>Everyday style and care that builds confidence for the whole family</h2>
+    <p>Premium salon services for men, women and kids in Sanpada & Nerul, Navi Mumbai.</p>
+    <a href="contact.html" class="btn">Book Appointment</a>
+    <a href="services.html" class="btn btn-outline">View Services</a>
+</div>
 </section>
 
 <section class="intro container">
 <h2>Your Trusted Family Salon</h2>
-<p>Since 2014, STUDIO 13 FAMILY SALON has been delivering premium grooming, beauty & bridal services using L’Oréal & Kérastase products.</p>
+<p>Since 2014, STUDIO 13 FAMILY SALON has been providing professional haircuts, beauty treatments, grooming, and bridal services to families in Navi Mumbai. Our experienced team ensures personalized care, hygiene, and a relaxing environment. Partnered with premium brands like <strong>L’Oréal</strong> and <strong>Kérastase</strong>, we use only high-quality products for every service.</p>
+
+<div class="features">
+    <div class="feature-item">
+        <i class="fas fa-cut"></i>
+        <h4>Expert Stylists</h4>
+        <p>Professional team for all age groups.</p>
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-spa"></i>
+        <h4>Beauty & Spa</h4>
+        <p>Facials, skincare & relaxing treatments.</p>
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-brush"></i>
+        <h4>Hair Treatments</h4>
+        <p>Kerastase & L’Oréal hair care solutions.</p>
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-child"></i>
+        <h4>Kids Friendly</h4>
+        <p>Safe & stylish services for children.</p>
+    </div>
+</div>
 </section>
 
-<section class="container">
-<h2 style="text-align:center;">Our Popular Services</h2>
-
+<section class="services-preview container">
+<h2>Our Popular Services</h2>
 <div class="grid">
-
-<div class="service-box">
-<img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1" alt="">
-<h3>Haircuts & Styling</h3>
-<button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
-<div class="service-details">
-<p>Trendy haircuts for men, women & kids.</p>
-<ul class="features-list">
-<li><i class="fas fa-check"></i> Expert stylists</li>
-<li><i class="fas fa-check"></i> Premium tools</li>
-</ul>
-</div>
-</div>
-
-<div class="service-box">
-<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348" alt="">
-<h3>Hair Coloring</h3>
-<button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
-<div class="service-details">
-<p>Highlights, balayage & global coloring.</p>
-</div>
-</div>
-
-<div class="service-box">
-<img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65" alt="">
-<h3>Bridal & Party</h3>
-<button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
-<div class="service-details">
-<p>Elegant bridal and party styling packages.</p>
-</div>
-</div>
-
-<div class="service-box">
-<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033" alt="">
-<h3>Men’s Grooming</h3>
-<button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
-<div class="service-details">
-<p>Beard trims, facials & complete grooming services.</p>
-</div>
-</div>
-
-</div>
-</section>
-
-<footer class="site-footer">
-<p>© 2025 STUDIO 13 FAMILY SALON | Navi Mumbai</p>
-</footer>
-
-<a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<script>
-function toggleDetails(btn) {
-    const details = btn.nextElementSibling;
-    details.style.display = details.style.display === "block" ? "none" : "block";
-    btn.innerText = details.style.display === "block" ? "Show Less" : "Learn More";
-}
-</script>
-
-</body>
-</html>
+    <div class="service-box">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Haircuts and styling">
+        <h3>Haircuts & Styling</h3>
+        <p>Trendy haircuts, trims, and styling for men, women, and kids.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+        <div class="service-details">
+            <p>Our haircuts and styling services are tailored to suit every family member. From modern fades for men to playful cuts for kids, we use premium tools and techniques to ensure a perfect look.</p>
+            <div class="additional-images">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=100&q=80" alt="Styling tools">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Salon chair">
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-check"></i> Professional consultation</li>
+                <li><i class="fas fa-check"></i> High-quality products</li>
+                <li><i class="fas fa-check"></i> Quick and efficient service</li>
+                <li><i class="fas fa-check"></i> Family-friendly environment</li>
+            </ul>
+        </div>
+    </div>
+    <div class="service-box">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair coloring services">
+        <h3>Hair Coloring</h3>
+        <p>Professional hair coloring, highlights, balayage, and color correction.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+        <div class="service-details">
+            <p>Achieve vibrant, long-lasting color with our expert coloring services. We use ammonia-free options for sensitive scalps and offer a range of shades to match your style.</p>
+            <div class="additional-images">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=100&q=80" alt="Color palette">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Coloring process">
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-check"></i> Ammonia-free options</li>
+                <li><i class="fas fa-check"></i> Color consultation</li>
+                <li><i class="fas fa-check"></i> Long-lasting results</li>
+                <li><i class="fas fa-check"></i> Safe for all hair types</li>
+            </ul>
+        </div>
+    </div>
+    <div class="service-box">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal services">
+        <h3>Bridal & Party Styling</h3>
+        <p>Elegant bridal makeup, hair styling, and party looks for every occasion.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+        <div class="service-details">
+            <p>Make your special day unforgettable with our bridal and party styling. From intricate hairdos to flawless makeup, our team creates looks that last.</p>
+            <div class="additional-images">
+                <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=100&q=80" alt="Bridal makeup">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Party styling">
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-check"></i> Trial sessions available</li>
+                <li><i class="fas fa-check"></i> Premium products</li>
+                <li><i class="fas fa-check"></i> On-site services</li>
+                <li><i class="fas fa-check"></i> Customizable packages</li>
+            </ul>
+        </div>
+    </div>
+    <div class="service-box">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80" alt="Grooming">
+        <h3>Men's Grooming</h3>
+        <p>Beard trims, facials, and grooming services tailored for men.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+        <div class="service-details">
+            <p>Enhance your appearance with our men's grooming services. From precise beard trims to rejuvenating facials, we cater to modern men's needs.</p>
+            <div class="additional-images">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=100&q=80" alt="Beard trim">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit
