@@ -1,499 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDIO 13 FAMILY SALON | Premium Family Salon in Navi Mumbai</title>
-    <meta name="description" content="STUDIO 13 FAMILY SALON offers premium haircuts, beauty treatments, bridal & grooming services for men, women, and kids in Sanpada & Nerul, Navi Mumbai.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #c9a24d;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s, transform 0.2s;
-            font-weight: bold;
-        }
-        .btn:hover {
-            background: #b18e3f;
-            transform: translateY(-2px);
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #c9a24d;
-            color: #c9a24d;
-        }
-        .btn-outline:hover {
-            background: #c9a24d;
-            color: #fff;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STUDIO 13 FAMILY SALON | Premium Family Salon in Navi Mumbai</title>
+<meta name="description" content="STUDIO 13 FAMILY SALON offers premium haircuts, beauty treatments, bridal & grooming services for men, women, and kids in Sanpada & Nerul, Navi Mumbai.">
 
-        /* Header */
-        .header {
-            background: #111;
-            color: #fff;
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            border-bottom: 4px solid #c9a24d;
-        }
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #c9a24d;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-        nav ul li {
-            margin-left: 20px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 600;
-        }
-        nav ul li a:hover {
-            color: #c9a24d;
-        }
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=1600&q=80') center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            position: relative;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            max-width: 750px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f2f2f2;
+    color: #222;
+}
 
-        /* Intro/About Section */
-        .intro {
-            padding: 80px 0;
-            background: #fff;
-            text-align: center;
-        }
-        .intro h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #c9a24d;
-        }
-        .intro p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: auto;
-        }
-        .features {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-top: 30px;
-        }
-        .feature-item {
-            text-align: center;
-            max-width: 200px;
-        }
-        .feature-item i {
-            font-size: 2.5em;
-            color: #c9a24d;
-            margin-bottom: 10px;
-        }
-        .feature-item h4 {
-            margin-bottom: 8px;
-            font-size: 1.2em;
-        }
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
 
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: #f9f9f9;
-        }
-        .services h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #c9a24d;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .service-item {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .service-item:hover {
-            transform: translateY(-5px);
-        }
-        .service-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        .service-item i {
-            font-size: 3em;
-            color: #c9a24d;
-            margin-bottom: 15px;
-        }
-        .service-item h3 {
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-        .service-item p {
-            font-size: 1em;
-            line-height: 1.5;
-        }
+/* HEADER */
+.site-header {
+    background: #111;
+    padding: 20px 0;
+    border-bottom: 4px solid #c9a24d;
+}
 
-        /* Gallery Section */
-        .gallery {
-            padding: 80px 0;
-            background: #fff;
-        }
-        .gallery h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #c9a24d;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
+.site-header h1 {
+    text-align: center;
+    color: #c9a24d;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
 
-        /* Locations Section */
-        .locations {
-            padding: 80px 0;
-            background: #f9f9f9;
-        }
-        .locations h2 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #c9a24d;
-        }
-        .locations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        .location-box {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border: 2px solid #c9a24d;
-        }
-        .location-box h3 {
-            color: #c9a24d;
-            margin-bottom: 10px;
-        }
-        .location-box p, .location-box a {
-            color: #333;
-            text-decoration: none;
-            margin-bottom: 10px;
-        }
-        .location-box a:hover {
-            text-decoration: underline;
-            color: #c9a24d;
-        }
+nav {
+    text-align: center;
+}
 
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
-            background: #fff;
-            text-align: center;
-        }
-        .contact h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #c9a24d;
-        }
-        .contact p {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
-        .contact-form {
-            max-width: 600px;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-        }
-        .contact-form input, .contact-form textarea {
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        .contact-form button {
-            padding: 12px;
-            background: #c9a24d;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background 0.3s;
-        }
-        .contact-form button:hover {
-            background: #b18e3f;
-        }
+nav a {
+    color: #fff;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
 
-        /* Final CTA */
-        .final-cta {
-            background: linear-gradient(135deg, #111, #333);
-            color: #fff;
-            text-align: center;
-            padding: 70px 0;
-        }
-        .final-cta h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+nav a:hover {
+    color: #c9a24d;
+}
 
-        /* Footer */
-        .footer {
-            background: #111;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-        }
-        .footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .footer-links a {
-            color: #c9a24d;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #c9a24d;
-        }
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
 
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: #25d366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 24px;
-            text-decoration: none;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-            transition: transform 0.3s;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header .container {
-                flex-direction: column;
-            }
-            nav ul {
-                margin-top: 10px;
-            }
-            nav ul li {
-                margin: 0 10px;
-            }
-            .hero h1 {
-                font-size: 2em;
-            }
-            .hero p {
-                font-size: 1.1em;
-            }
-            .services-grid, .gallery-grid, .locations-grid {
-                grid-template-columns: 1fr;
-            }
-            .features {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+.hero p {
+    font-size: 1.2em;
+    max-width: 750px;
+    margin: auto;
+    color: #e0e0e0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    background: #c9a24d;
+    color: #111;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #b18e3f;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #c9a24d;
+    color: #c9a24d;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #111;
+}
+
+.intro p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: auto;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.feature-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.feature-item i {
+    font-size: 2.5em;
+    color: #c9a24d;
+    margin-bottom: 10px;
+}
+
+.feature-item h4 {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+}
+
+/* SERVICES */
+section h2 {
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.service-box {
+    background: #f8f8f8;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.service-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.service-box p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+/* LOCATIONS */
+.locations {
+    background: #f8f8f8;
+    color: #333;
+    padding: 70px 20px;
+}
+
+.location-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #c9a24d;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.location-box h3 {
+    color: #c9a24d;
+    margin-bottom: 8px;
+}
+
+.location-box p, .location-box a {
+    color: #333;
+    text-decoration: none;
+}
+
+.location-box a:hover {
+    text-decoration: underline;
+    color: #c9a24d;
+}
+
+/* FINAL CTA */
+.final-cta {
+    background: linear-gradient(135deg, #111, #333);
+    color: #fff;
+    text-align: center;
+    padding: 70px 0;
+}
+
+/* FOOTER */
+.site-footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.site-footer a {
+    color: #c9a24d;
+    text-decoration: none;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+}
+</style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">STUDIO 13 FAMILY SALON</div>
-            <nav aria-label="Main Navigation">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#intro">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="products.html">Shop</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#locations">Locations</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Style, Care & Confidence for the Whole Family</h1>
-            <p>Premium salon services for men, women, and kids in Sanpada & Nerul, Navi Mumbai. Experience luxury and professionalism with expert stylists.</p>
-            <a href="#contact" class="btn">Book Appointment</a>
-            <a href="#services" class="btn btn-outline">View Services</a>
-        </div>
-    </section>
+<header class="site-header">
+<div class="container">
+    <h1>STUDIO 13 FAMILY SALON</h1>
+    <nav aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="products.html">Shop</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</div>
+</header>
 
-    <section id="intro" class="intro">
-        <div class="container">
-            <h2>Your Trusted Family Salon</h2>
-            <p>Since 2014, STUDIO 13 FAMILY SALON has been providing professional haircuts, beauty treatments, grooming, and bridal services to families in Navi Mumbai. Our experienced team ensures personalized care, hygiene, and a relaxing environment. Partnered with premium brands like <strong>L’Oréal</strong> and <strong>Kérastase</strong>, we use only high-quality products for every service.</p>
-            <div class="features">
-                <div class="feature-item">
-                    <i class="fas fa-cut"></i>
-                    <h4>Expert Stylists</h4>
-                    <p>Professional team for all age groups.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-spa"></i>
-                    <h4>Beauty & Spa</h4>
-                    <p>Facials, skincare & relaxing treatments.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-brush"></i>
-                    <h4>Hair Treatments</h4>
-                    <p>Kerastase & L’Oréal hair care solutions.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-child"></i>
-                    <h4>Kids Friendly</h4>
-                    <p>Safe & stylish services for children.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+<div class="container">
+    <h2>Style, Care & Confidence for the Whole Family</h2>
+    <p>Premium salon services for men, women and kids in Sanpada & Nerul, Navi Mumbai.</p>
+    <a href="contact.html" class="btn">Book Appointment</a>
+    <a href="services.html" class="btn btn-outline">View Services</a>
+</div>
+</section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Our Popular Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Haircuts and styling">
-                    <h3>Haircuts & Styling</h3>
-                    <p>Trendy haircuts, trims, and styling for men, women, and kids using premium products.</p>
-                </div>
-                <div class="service-item">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair coloring services">
-                    <h3>Hair Coloring</h3>
-                    <p>Professional hair coloring, highlights, balayage, and color correction with L'Oréal expertise.</p>
-                </div>
-                <div class="service-item">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal services">
-                    <h3>Bridal & Party Styling</h3>
-                    <p>Elegant bridal makeup, hair styling, and party looks for every occasion.</p>
-                </div>
-                <div class="service-item">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80" alt="Grooming">
-                    <h3>Men's Grooming</h3>
-                    <p>Beard trims, facials, and grooming services tailored for men.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-spa"></i>
-                    <h3>Spa Treatments</h3>
-                    <p>Relaxing spa experiences for ultimate rejuvenation and wellness.</p>
-                </div>
-                <div class="service-item">
-                    <i class="fas fa-magic"></i>
-                    <h3>Beauty Treatments</h3>
-                    <p>Facials, manicures, pedicures, and more for glowing, healthy skin.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="intro container">
+<h2>Your Trusted Family Salon</h2>
+<p>Since 2014, STUDIO 13 FAMILY SALON has been providing professional haircuts, beauty treatments, grooming, and bridal services to families in Navi Mumbai. Our experienced team ensures personalized care, hygiene, and a relaxing environment. Partnered with premium brands like <strong>L’Oréal</strong> and <strong>Kérastase</strong>, we use only high-quality products for every service.</p>
 
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2>Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Salon Interior"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=400&q=80" alt="Hair Styling"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=400&q=80" alt="Beauty Treatment"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="Spa Session"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair Coloring"></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-
+<div class="features">
+    <div class="feature-item">
+        <i class="fas fa-cut"></i>
+        <h4>Expert Stylists</h4>
+        <p>Professional team for all age groups.</p>
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-spa"></i>
+        <h4>Beauty & Spa</h4>
+        <p>Facials, skincare & relaxing treatments.</p>
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-brush"></i>
+        <h4>Hair Treatments</h4>
+        <p>Kerastase & L’Oréal hair care solutions.</p>
+    </div>
+    <div class="feature-item">
+        <i class="fas fa-child"></i>
+        <h4>Kids Friendly</h4>
+        <p>Safe & stylish services for children.</p>
+    </div>
+</div>
+</section>
+
+<section class="services-preview container">
+<h2>Our Popular Services</h2>
+<div class="grid">
+    <div class="service-box">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Haircuts and styling">
+        <h3>Haircuts & Styling</h3>
+        <p>Trendy haircuts, trims, and styling for men, women, and kids.</p>
+    </div>
+    <div class="service-box">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair coloring services">
+        <h3>Hair Coloring</h3>
+        <p>Professional hair coloring, highlights, balayage, and color correction.</p>
+    </div>
+    <div class="service-box">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal services">
+        <h3>Bridal & Party Styling</h3>
+        <p>Elegant bridal makeup, hair styling, and party looks for every occasion.</p>
+    </div>
+    <div class="service-box">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80" alt="Grooming">
+        <h3>Men's Grooming</h3>
+        <p>Beard trims, facials, and grooming services tailored for men.</p>
+    </div>
+</div>
+</section>
+
+<section class="locations">
+<div class="container">
+<h2>Our Locations</h2>
+<div class="grid">
+    <div class="location-box">
+        <h3>Sanpada Branch</h3>
+        <p>Shop No. 20, Moraj Residency, Next to Axis Bank, Palm Beach Road, Sanpada, Navi Mumbai, Maharashtra 400705</p>
+        <p>📞 022-41231313 | 📱 7506961313</p>
+        <a href="https://goo.gl/maps/YourSanpadaBranch" target="_blank"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+    </div>
+    <div class="location-box">
+        <h3>Nerul Branch</h3>
+        <p>Shop No. 1,2,3, Next to South Indian Bank, Ruparel Garden Residency, Nerul East, Sector 23, Navi Mumbai, Maharashtra 400706</p>
+        <p>📞 022-35691227 | 📱 9152161313</p>
+        <a href="https://goo.gl/maps/YourNerulBranch" target="_blank"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
+    </div>
+</div>
+</div>
+</section>
+
+<section class="final-cta">
+<div class="container">
+<h2>Ready for a Fresh Look?</h2>
+<a href="contact.html" class="btn">Book Now</a>
+</div>
+</section>
+
+<footer class="site-footer">
+<p>
+© 2025 STUDIO 13 FAMILY SALON | Navi Mumbai<br>
+<a href="https://www.google.com/search?q=studio+13+family+salon" target="_blank" rel="noopener noreferrer">
+    <i class="fab fa-google"></i> Find us on Google
+</a>
+</p>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917506961313" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
