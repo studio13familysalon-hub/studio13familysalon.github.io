@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juice Salons - Fresh, Healthy, and Delicious</title>
+    <title>STUDIO 13 FAMILY SALON - Stylish Haircuts and Beauty Services</title>
     <style>
         * {
             margin: 0;
@@ -78,8 +78,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('https://via.placeholder.com/1200x600/ffb74d/ffffff?text=Fresh+Juices') no-repeat center center;
-            background-size: cover;
+            background: url('https://via.placeholder.com/1200x600/ffb74d/ffffff?text=Salon+Services') no-repeat center center;
+            background-size: 100% 100%;
             opacity: 0.3;
             z-index: 1;
         }
@@ -206,7 +206,7 @@
         .gallery-grid img {
             width: 100%;
             height: 150px;
-            object-fit: 100%;
+            object-fit: cover;
             border-radius: 20px;
             transition: transform 0.3s ease;
         }
@@ -338,7 +338,7 @@
 <body>
     <header class="site-header">
         <div class="container">
-            <h1>Juice Salons</h1>
+            <h1>STUDIO 13 FAMILY SALON</h1>
             <nav>
                 <a href="#about">About</a>
                 <a href="#services">Services</a>
@@ -351,16 +351,16 @@
 
     <section class="hero fade-in">
         <div class="container">
-            <h2>Fresh Juices for a Healthy Life</h2>
-            <p>Experience the best in natural, organic juices made with love and care.</p>
-            <a href="#contact" class="btn">Get Started</a>
+            <h2>Stylish Haircuts for the Whole Family</h2>
+            <p>Experience top-notch beauty services in a welcoming environment for everyone.</p>
+            <a href="#contact" class="btn">Book Now</a>
         </div>
     </section>
 
     <section id="about" class="about fade-in">
         <div class="container">
             <h2>About Us</h2>
-            <p>At Juice Salons, we believe in the power of fresh, natural ingredients to nourish your body and soul. Our expert team crafts delicious juices using only the finest fruits and vegetables, ensuring every sip is a burst of flavor and health.</p>
+            <p>At STUDIO 13 FAMILY SALON, we specialize in providing high-quality hair and beauty services for the entire family. Our skilled stylists create personalized looks that make you feel confident and beautiful.</p>
         </div>
     </section>
 
@@ -369,19 +369,19 @@
             <h2>Our Services</h2>
             <div class="grid">
                 <div class="service-box">
-                    <img src="https://via.placeholder.com/300x200/ffcc80/000000?text=Fresh+Juices" alt="Fresh Juices">
-                    <h3>Fresh Juices</h3>
-                    <p>Daily pressed juices from organic fruits and veggies.</p>
+                    <img src="https://via.placeholder.com/300x200/ffcc80/000000?text=Haircuts" alt="Haircuts">
+                    <h3>Haircuts</h3>
+                    <p>Professional cuts tailored to your style and preferences.</p>
                 </div>
                 <div class="service-box">
-                    <img src="https://via.placeholder.com/300x200/ffb74d/000000?text=Smoothies" alt="Smoothies">
-                    <h3>Smoothies</h3>
-                    <p>Blended delights packed with nutrients and energy.</p>
+                    <img src="https://via.placeholder.com/300x200/ffb74d/000000?text=Coloring" alt="Coloring">
+                    <h3>Coloring</h3>
+                    <p>Vibrant colors and highlights to enhance your look.</p>
                 </div>
                 <div class="service-box">
-                    <img src="https://via.placeholder.com/300x200/ff8a65/000000?text=Detox+Programs" alt="Detox Programs">
-                    <h3>Detox Programs</h3>
-                    <p>Customized plans to cleanse and rejuvenate your body.</p>
+                    <img src="https://via.placeholder.com/300x200/ff8a65/000000?text=Styling" alt="Styling">
+                    <h3>Styling</h3>
+                    <p>Expert styling for special occasions and everyday elegance.</p>
                 </div>
             </div>
         </div>
@@ -391,12 +391,12 @@
         <div class="container">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <img src="https://via.placeholder.com/200x150/ffcc80/000000?text=Juice+1" alt="Juice 1">
-                <img src="https://via.placeholder.com/200x150/ffb74d/000000?text=Juice+2" alt="Juice 2">
-                <img src="https://via.placeholder.com/200x150/ff8a65/000000?text=Juice+3" alt="Juice 3">
-                <img src="https://via.placeholder.com/200x150/d32f2f/ffffff?text=Juice+4" alt="Juice 4">
-                <img src="https://via.placeholder.com/200x150/4caf50/ffffff?text=Juice+5" alt="Juice 5">
-                <img src="https://via.placeholder.com/200x150/2196f3/ffffff?text=Juice+6" alt="Juice 6">
+                <img src="https://via.placeholder.com/200x150/ffcc80/000000?text=Haircut+1" alt="Haircut 1">
+                <img src="https://via.placeholder.com/200x150/ffb74d/000000?text=Haircut+2" alt="Haircut 2">
+                <img src="https://via.placeholder.com/200x150/ff8a65/000000?text=Haircut+3" alt="Haircut 3">
+                <img src="https://via.placeholder.com/200x150/d32f2f/ffffff?text=Style+4" alt="Style 4">
+                <img src="https://via.placeholder.com/200x150/4caf50/ffffff?text=Style+5" alt="Style 5">
+                <img src="https://via.placeholder.com/200x150/2196f3/ffffff?text=Style+6" alt="Style 6">
             </div>
         </div>
     </section>
@@ -405,11 +405,11 @@
         <div class="container">
             <h2>What Our Customers Say</h2>
             <div class="testimonial">
-                <p>"The best juices I've ever tasted! Felt energized all day."</p>
+                <p>"The best haircut I've ever had! The stylists are amazing."</p>
                 <cite>- Jane Doe</cite>
             </div>
             <div class="testimonial">
-                <p>"Amazing detox program. Highly recommend Juice Salons!"</p>
+                <p>"Great service for the whole family. Highly recommend!"</p>
                 <cite>- John Smith</cite>
             </div>
         </div>
@@ -429,7 +429,7 @@
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2023 Juice Salons. All rights reserved. | <a href="https://www.juicesalons.com/?srsltid=AfmBOoqvrxzsZvmnin7JPi6wnlYjLumgf1tqtwnSHGjXh23zAnw6VJrK" target="_blank">Visit Official Site</a></p>
+            <p>&copy; 2023 STUDIO 13 FAMILY SALON. All rights reserved. | <a href="https://www.studio13familysalon.com" target="_blank">Visit Official Site</a></p>
         </div>
     </footer>
 </body>
