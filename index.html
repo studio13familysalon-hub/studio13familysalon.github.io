@@ -13,7 +13,9 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f2f2f2;
+    background: linear-gradient(rgba(242, 242, 242, 0.85), rgba(242, 242, 242, 0.85)), 
+                url("https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=1600&q=80") no-repeat center center fixed;
+    background-size: cover;
     color: #222;
 }
 
@@ -25,7 +27,7 @@ body {
 
 /* HEADER */
 .site-header {
-    background: #111;
+    background: rgba(17, 17, 17, 0.9); /* Semi-transparent to let background show slightly */
     padding: 20px 0;
     border-bottom: 4px solid #c9a24d;
 }
@@ -56,7 +58,7 @@ nav a:hover {
 /* HERO */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url("https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=1600&q=80");
+    url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -106,6 +108,9 @@ nav a:hover {
 .intro {
     text-align: center;
     padding: 60px 20px;
+    background: rgba(248, 248, 248, 0.9); /* Semi-transparent to blend with background */
+    border-radius: 10px;
+    margin: 20px;
 }
 
 .intro h2 {
@@ -159,12 +164,13 @@ section h2 {
 }
 
 .service-box {
-    background: #f8f8f8;
+    background: rgba(248, 248, 248, 0.95); /* Semi-transparent for depth */
     padding: 25px;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+    overflow: hidden; /* To hide expanded content initially */
 }
 
 .service-box img {
@@ -189,15 +195,75 @@ section h2 {
     transform: translateY(-5px);
 }
 
+/* Expanded content styles */
+.service-details {
+    display: none; /* Hidden by default */
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.service-details p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.service-details .additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.service-details .additional-images img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.service-details .features-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.service-details .features-list li {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.service-details .features-list i {
+    color: #c9a24d;
+    margin-right: 8px;
+}
+
+.toggle-btn {
+    background: #c9a24d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #b18e3f;
+}
+
 /* LOCATIONS */
 .locations {
-    background: #f8f8f8;
+    background: rgba(248, 248, 248, 0.9); /* Semi-transparent */
     color: #333;
     padding: 70px 20px;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 .location-box {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
     padding: 20px;
     border-radius: 12px;
     border: 2px solid #c9a24d;
@@ -221,15 +287,17 @@ section h2 {
 
 /* FINAL CTA */
 .final-cta {
-    background: linear-gradient(135deg, #111, #333);
+    background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(51, 51, 51, 0.9)); /* Semi-transparent */
     color: #fff;
     text-align: center;
     padding: 70px 0;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 /* FOOTER */
 .site-footer {
-    background: #111;
+    background: rgba(17, 17, 17, 0.9); /* Semi-transparent */
     color: #fff;
     text-align: center;
     padding: 30px 0;
@@ -335,65 +403,79 @@ section h2 {
         <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Haircuts and styling">
         <h3>Haircuts & Styling</h3>
         <p>Trendy haircuts, trims, and styling for men, women, and kids.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+        <div class="service-details">
+            <p>Our haircuts and styling services are tailored to suit every family member. From modern fades for men to playful cuts for kids, we use premium tools and techniques to ensure a perfect look. Starting from ₹300.</p>
+            <div class="additional-images">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=100&q=80" alt="Styling tools">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Salon chair">
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-check"></i> Professional consultation</li>
+                <li><i class="fas fa-check"></i> High-quality products</li>
+                <li><i class="fas fa-check"></i> Quick and efficient service</li>
+                <li><i class="fas fa-check"></i> Family-friendly environment</li>
+            </ul>
+        </div>
     </div>
     <div class="service-box">
         <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair coloring services">
         <h3>Hair Coloring</h3>
         <p>Professional hair coloring, highlights, balayage, and color correction.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+        <div class="service-details">
+            <p>Achieve vibrant, long-lasting color with our expert coloring services. We use ammonia-free options for sensitive scalps and offer a range of shades to match your style. Starting from ₹800.</p>
+            <div class="additional-images">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=100&q=80" alt="Color palette">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Coloring process">
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-check"></i> Ammonia-free options</li>
+                <li><i class="fas fa-check"></i> Color consultation</li>
+                <li><i class="fas fa-check"></i> Long-lasting results</li>
+                <li><i class="fas fa-check"></i> Safe for all hair types</li>
+            </ul>
+        </div>
     </div>
     <div class="service-box">
         <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal services">
         <h3>Bridal & Party Styling</h3>
         <p>Elegant bridal makeup, hair styling, and party looks for every occasion.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+        <div class="service-details">
+            <p>Make your special day unforgettable with our bridal and party styling. From intricate hairdos to flawless makeup, our team creates looks that last. Starting from ₹2000.</p>
+            <div class="additional-images">
+                <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=100&q=80" alt="Bridal makeup">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Party styling">
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-check"></i> Trial sessions available</li>
+                <li><i class="fas fa-check"></i> Premium products</li>
+                <li><i class="fas fa-check"></i> On-site services</li>
+                <li><i class="fas fa-check"></i> Customizable packages</li>
+            </ul>
+        </div>
     </div>
     <div class="service-box">
         <img loading="lazy" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80" alt="Grooming">
         <h3>Men's Grooming</h3>
         <p>Beard trims, facials, and grooming services tailored for men.</p>
+        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+        <div class="service-details">
+            <p>Enhance your appearance with our men's grooming services. From precise beard trims to rejuvenating facials, we cater to modern men's needs. Starting from ₹500.</p>
+            <div class="additional-images">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=100&q=80" alt="Beard trim">
+                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Facial treatment">
+            </div>
+            <ul class="features-list">
+                <li><i class="fas fa-check"></i> Expert grooming</li>
+                <li><i class="fas fa-check"></i> Relaxing environment</li>
+                <li><i class="fas fa-check"></i> Quick sessions</li>
+                <li><i class="fas fa-check"></i> High-quality tools</li>
+            </ul>
+        </div>
     </div>
 </div>
 </section>
 
-<section class="locations">
-<div class="container">
-<h2>Our Locations</h2>
-<div class="grid">
-    <div class="location-box">
-        <h3>Sanpada Branch</h3>
-        <p>Shop No. 20, Moraj Residency, Next to Axis Bank, Palm Beach Road, Sanpada, Navi Mumbai, Maharashtra 400705</p>
-        <p>📞 022-41231313 | 📱 7506961313</p>
-        <a href="https://goo.gl/maps/YourSanpadaBranch" target="_blank"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
-    </div>
-    <div class="location-box">
-        <h3>Nerul Branch</h3>
-        <p>Shop No. 1,2,3, Next to South Indian Bank, Ruparel Garden Residency, Nerul East, Sector 23, Navi Mumbai, Maharashtra 400706</p>
-        <p>📞 022-35691227 | 📱 9152161313</p>
-        <a href="https://goo.gl/maps/YourNerulBranch" target="_blank"><i class="fas fa-map-marker-alt"></i> Get Directions</a>
-    </div>
-</div>
-</div>
-</section>
-
-<section class="final-cta">
-<div class="container">
-<h2>Ready for a Fresh Look?</h2>
-<a href="contact.html" class="btn">Book Now</a>
-</div>
-</section>
-
-<footer class="site-footer">
-<p>
-© 2025 STUDIO 13 FAMILY SALON | Navi Mumbai<br>
-<a href="https://www.google.com/search?q=studio+13+family+salon" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-google"></i> Find us on Google
-</a>
-</p>
-</footer>
-
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/917506961313" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-</body>
-</html>
+<section class="
