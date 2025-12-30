@@ -332,61 +332,61 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
-  /* ===== Service Toggle (Open / Close) ===== */
+        }
 
-.toggle-btn {
-    background: #d32f2f;
-    color: #fff;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 25px;
-    cursor: pointer;
-    margin: 15px;
-    font-weight: bold;
-    font-size: 0.95em;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
+        /* ===== Service Toggle (Open / Close) ===== */
+        .toggle-btn {
+            background: #d32f2f;
+            color: #fff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 15px;
+            font-weight: bold;
+            font-size: 0.95em;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
 
-.toggle-btn:hover {
-    background: #b71c1c;
-}
+        .toggle-btn:hover {
+            background: #b71c1c;
+        }
 
-.toggle-btn:active {
-    transform: scale(0.95);
-}
+        .toggle-btn:active {
+            transform: scale(0.95);
+        }
 
-.service-details {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 15px;
-    transition: max-height 0.4s ease;
-    background: #fafafa;
-    border-top: 1px solid #eee;
-}
+        .service-details {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 15px;
+            transition: max-height 0.4s ease;
+            background: #fafafa;
+            border-top: 1px solid #eee;
+        }
 
-.service-details.open {
-    padding: 15px;
-}
+        .service-details.open {
+            padding: 15px;
+        }
 
-.service-details ul {
-    list-style: none;
-    padding: 0;
-}
+        .service-details ul {
+            list-style: none;
+            padding: 0;
+        }
 
-.service-details li {
-    margin-bottom: 8px;
-    font-size: 0.95em;
-}
+        .service-details li {
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
 
-.service-details li::before {
-    content: "✔";
-    color: #d32f2f;
-    margin-right: 8px;
-}
-      }
+        .service-details li::before {
+            content: "✔";
+            color: #d32f2f;
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body>
@@ -426,16 +426,40 @@
                     <img src="https://via.placeholder.com/300x200/ffcc80/000000?text=Haircuts" alt="Haircuts">
                     <h3>Haircuts</h3>
                     <p>Professional cuts tailored to your style and preferences.</p>
+                    <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+                    <div class="service-details">
+                        <ul>
+                            <li>Men's cuts and trims</li>
+                            <li>Women's layered cuts</li>
+                            <li>Kids' fun and safe styles</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="service-box">
                     <img src="https://via.placeholder.com/300x200/ffb74d/000000?text=Coloring" alt="Coloring">
                     <h3>Coloring</h3>
                     <p>Vibrant colors and highlights to enhance your look.</p>
+                    <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+                    <div class="service-details">
+                        <ul>
+                            <li>Full color treatments</li>
+                            <li>Highlights and balayage</li>
+                            <li>Color correction services</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="service-box">
                     <img src="https://via.placeholder.com/300x200/ff8a65/000000?text=Styling" alt="Styling">
                     <h3>Styling</h3>
                     <p>Expert styling for special occasions and everyday elegance.</p>
+                    <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
+                    <div class="service-details">
+                        <ul>
+                            <li>Updos and bridal styles</li>
+                            <li>Blowouts and curls</li>
+                            <li>Braiding and accessories</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -486,29 +510,28 @@
             <p>&copy; 2023 STUDIO 13 FAMILY SALON. All rights reserved. | <a href="https://www.studio13familysalon.com" target="_blank">Visit Official Site</a></p>
         </div>
     </footer>
-<script>
-function toggleDetails(button) {
-    const details = button.nextElementSibling;
-    const isOpen = details.classList.contains("open");
+    <script>
+        function toggleDetails(button) {
+            const details = button.nextElementSibling;
+            const isOpen = details.classList.contains("open");
 
-    // Close all open service details
-    document.querySelectorAll(".service-details").forEach(item => {
-        item.classList.remove("open");
-        item.style.maxHeight = null;
-    });
+            // Close all open service details
+            document.querySelectorAll(".service-details").forEach(item => {
+                item.classList.remove("open");
+                item.style.maxHeight = null;
+            });
 
-    document.querySelectorAll(".toggle-btn").forEach(btn => {
-        btn.textContent = "Learn More";
-    });
+            document.querySelectorAll(".toggle-btn").forEach(btn => {
+                btn.textContent = "Learn More";
+            });
 
-    // Open selected service
-    if (!isOpen) {
-        details.classList.add("open");
-        details.style.maxHeight = details.scrollHeight + "px";
-        button.textContent = "Close";
-    }
-}
-</script>
-
+            // Open selected service
+            if (!isOpen) {
+                details.classList.add("open");
+                details.style.maxHeight = details.scrollHeight + "px";
+                button.textContent = "Close";
+            }
+        }
+    </script>
 </body>
 </html>
