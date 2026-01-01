@@ -13,8 +13,8 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(rgba(242, 242, 242, 0.85), rgba(242, 242, 242, 0.85)), 
-                url("https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=1600&q=80") no-repeat center center fixed; /* Changed to a more elegant salon interior image for professionalism */
+    background: rgba(242, 242, 242, 0.85), 
+                url("https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=1600&q=80") no-repeat center center fixed;
     background-size: cover;
     color: #222;
 }
@@ -27,7 +27,7 @@ body {
 
 /* HEADER */
 .site-header {
-    background: rgba(17, 17, 17, 0.9); /* Semi-transparent to let background show slightly */
+    background: rgba(17, 17, 17, 0.9);
     padding: 20px 0;
     border-bottom: 4px solid #c9a24d;
 }
@@ -57,7 +57,7 @@ nav a:hover {
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    background: rgba(0,0,0,0.6),
     url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80");
     background-size: cover;
     background-position: center;
@@ -108,10 +108,10 @@ nav a:hover {
 .intro {
     text-align: center;
     padding: 60px 20px;
-    background: rgba(248, 248, 248, 0.9); /* Semi-transparent to blend with background */
+    background: rgba(248, 248, 248, 0.9);
     border-radius: 10px;
-    margin: 20px auto; /* Added 'auto' to ensure horizontal centering */
-    max-width: 1000px; /* Optional: Limit width for better centering on large screens */
+    margin: 20px auto;
+    max-width: 1000px;
 }
 
 .intro h2 {
@@ -151,6 +151,59 @@ nav a:hover {
     font-size: 1.2em;
 }
 
+/* DETAILED SERVICES */
+.detailed-services {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.detailed-services h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+.service-category {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(248, 248, 248, 0.9);
+    border-radius: 10px;
+    border-left: 5px solid #c9a24d;
+}
+
+.service-category h3 {
+    font-size: 1.8em;
+    color: #c9a24d;
+    margin-bottom: 15px;
+}
+
+.service-category p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.service-category ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.service-category ul li {
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.service-category ul li::before {
+    content: "✔ ";
+    color: #c9a24d;
+    font-weight: bold;
+}
+
 /* SERVICES */
 section h2 {
     text-align: center;
@@ -165,13 +218,13 @@ section h2 {
 }
 
 .service-box {
-    background: rgba(248, 248, 248, 0.95); /* Semi-transparent for depth */
+    background: rgba(248, 248, 248, 0.95);
     padding: 25px;
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
-    overflow: hidden; /* To hide expanded content initially */
+    overflow: hidden;
 }
 
 .service-box img {
@@ -198,7 +251,7 @@ section h2 {
 
 /* Expanded content styles */
 .service-details {
-    display: none; /* Hidden by default */
+    display: none;
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid #ddd;
@@ -256,7 +309,7 @@ section h2 {
 
 /* LOCATIONS */
 .locations {
-    background: rgba(248, 248, 248, 0.9); /* Semi-transparent */
+    background: rgba(248, 248, 248, 0.9);
     color: #333;
     padding: 70px 20px;
     border-radius: 10px;
@@ -264,7 +317,7 @@ section h2 {
 }
 
 .location-box {
-    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 12px;
     border: 2px solid #c9a24d;
@@ -289,7 +342,7 @@ section h2 {
 
 /* FINAL CTA */
 .final-cta {
-    background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(51, 51, 51, 0.9)); /* Semi-transparent */
+    background: linear-gradient(135deg, rgba(17, 17, 17, 0.9), rgba(51, 51, 51, 0.9));
     color: #fff;
     text-align: center;
     padding: 70px 0;
@@ -309,7 +362,7 @@ section h2 {
 
 /* FOOTER */
 .site-footer {
-    background: rgba(17, 17, 17, 0.9); /* Semi-transparent */
+    background: rgba(17, 17, 17, 0.9);
     color: #fff;
     text-align: center;
     padding: 30px 0;
@@ -337,7 +390,7 @@ section h2 {
     font-size: 1.5em;
 }
 
-/* WhatsApp Floating Button */
+/* Floating Buttons */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -361,6 +414,29 @@ section h2 {
     transform: scale(1.1);
 }
 
+.instagram-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 25px;
+    left: 25px;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.instagram-float:hover {
+    transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
     .hero h2 {
         font-size: 2.2em;
@@ -368,6 +444,12 @@ section h2 {
 
     .features {
         flex-direction: column;
+    }
+
+    .instagram-float, .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
     }
 }
 </style>
@@ -427,72 +509,88 @@ section h2 {
 </div>
 </section>
 
-<section class="services-preview container">
-<h2>Our Popular Services</h2>
-<div class="grid">
-    <div class="service-box">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=400&q=80" alt="Haircuts and styling">
-        <h3>Haircuts & Styling</h3>
-        <p>Trendy haircuts, trims, and styling for men, women, and kids.</p>
-        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
-        <div class="service-details">
-            <p>Our haircuts and styling services are tailored to suit every family member. From modern fades for men to playful cuts for kids, we use premium tools and techniques to ensure a perfect look.</p>
-            <div class="additional-images">
-                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=100&q=80" alt="Styling tools">
-                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Salon chair">
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-check"></i> Professional consultation</li>
-                <li><i class="fas fa-check"></i> High-quality products</li>
-                <li><i class="fas fa-check"></i> Quick and efficient service</li>
-                <li><i class="fas fa-check"></i> Family-friendly environment</li>
-            </ul>
-        </div>
-    </div>
-    <div class="service-box">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=400&q=80" alt="Hair coloring services">
-        <h3>Hair Coloring</h3>
-        <p>Professional hair coloring, highlights, balayage, and color correction.</p>
-        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
-        <div class="service-details">
-            <p>Achieve vibrant, long-lasting color with our expert coloring services. We use ammonia-free options for sensitive scalps and offer a range of shades to match your style.</p>
-            <div class="additional-images">
-                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=100&q=80" alt="Color palette">
-                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Coloring process">
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-check"></i> Ammonia-free options</li>
-                <li><i class="fas fa-check"></i> Color consultation</li>
-                <li><i class="fas fa-check"></i> Long-lasting results</li>
-                <li><i class="fas fa-check"></i> Safe for all hair types</li>
-            </ul>
-        </div>
-    </div>
-    <div class="service-box">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=400&q=80" alt="Bridal services">
-        <h3>Bridal & Party Styling</h3>
-        <p>Elegant bridal makeup, hair styling, and party looks for every occasion.</p>
-        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
-        <div class="service-details">
-            <p>Make your special day unforgettable with our bridal and party styling. From intricate hairdos to flawless makeup, our team creates looks that last.</p>
-            <div class="additional-images">
-                <img src="https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?auto=format&fit=crop&w=100&q=80" alt="Bridal makeup">
-                <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=100&q=80" alt="Party styling">
-            </div>
-            <ul class="features-list">
-                <li><i class="fas fa-check"></i> Trial sessions available</li>
-                <li><i class="fas fa-check"></i> Premium products</li>
-                <li><i class="fas fa-check"></i> On-site services</li>
-                <li><i class="fas fa-check"></i> Customizable packages</li>
-            </ul>
-        </div>
-    </div>
-    <div class="service-box">
-        <img loading="lazy" src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80" alt="Men's grooming">
-        <h3>Men's Grooming</h3>
-        <p>Beard trims, facials, and grooming services tailored for men.</p>
-        <button class="toggle-btn" onclick="toggleDetails(this)">Learn More</button>
-        <div class="service-details">
-            <p>Enhance your appearance with our men's grooming services. From precise beard trims to rejuvenating facials, we cater to modern men's needs.</p>
-            <div class="additional-images">
-                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?
+<section class="detailed-services container">
+<h2>Our Services</h2>
+
+<div class="service-category">
+    <h3>💇 Hair Services</h3>
+    <p>We offer professional hair services designed to suit your personality, lifestyle, and hair type.</p>
+    <p>Our hair services include:</p>
+    <ul>
+        <li>Haircuts & styling for men, women, and kids</li>
+        <li>Hair wash & blow-dry</li>
+        <li>Hair coloring, global color, highlights & balayage</li>
+        <li>Root touch-ups & grey coverage</li>
+        <li>Hair smoothening, straightening & rebonding</li>
+        <li>Hair spa & deep conditioning treatments</li>
+    </ul>
+    <p>Each service begins with a consultation to understand your needs and recommend the best solution.</p>
+</div>
+
+<div class="service-category">
+    <h3>💆 Beauty & Skincare Services</h3>
+    <p>Relax, refresh, and rejuvenate with our professional beauty treatments.</p>
+    <p>Beauty services include:</p>
+    <ul>
+        <li>Facials & clean-ups</li>
+        <li>Skin treatments for glow & hydration</li>
+        <li>Waxing & threading</li>
+        <li>Manicure & pedicure</li>
+        <li>Bridal & pre-bridal beauty care</li>
+    </ul>
+    <p>We use hygienic practices and skin-friendly products to ensure safe and effective treatments.</p>
+</div>
+
+<div class="service-category">
+    <h3>👰 Bridal & Party Styling</h3>
+    <p>Make your special moments unforgettable with our bridal and party styling services.</p>
+    <p>We specialize in:</p>
+    <ul>
+        <li>Bridal makeup & hair styling</li>
+        <li>Engagement & reception looks</li>
+        <li>Party & festive makeup</li>
+        <li>Trial sessions available</li>
+        <li>Customized bridal packages</li>
+    </ul>
+    <p>Our team focuses on enhancing your natural beauty while ensuring long-lasting results.</p>
+</div>
+
+<div class="service-category">
+    <h3>🧔 Men’s Grooming Services</h3>
+    <p>Modern grooming services tailored specially for men.</p>
+    <p>Men’s services include:</p>
+    <ul>
+        <li>Haircuts & styling</li>
+        <li>Beard trimming & shaping</li>
+        <li>Men’s facials & skincare</li>
+        <li>Hair treatments & scalp care</li>
+    </ul>
+    <p>Perfect for everyday grooming as well as special occasions.</p>
+</div>
+
+<div class="service-category">
+    <h3>👶 Kids’ Hair Services</h3>
+    <p>We provide a comfortable and friendly environment for children.</p>
+    <p>Kids’ services include:</p>
+    <ul>
+        <li>Safe & stylish haircuts</li>
+        <li>Gentle handling by trained professionals</li>
+        <li>Fun and stress-free experience</li>
+    </ul>
+    <p>Parents trust us for quality and care.</p>
+</div>
+
+<div class="service-category">
+    <h3>⭐ Why Choose STUDIO 13 FAMILY SALON?</h3>
+    <ul>
+        <li>Experienced & trained professionals</li>
+        <li>Premium products (L’Oréal, Kérastase & more)</li>
+        <li>Family-friendly & hygienic environment</li>
+        <li>Personalized consultation</li>
+        <li>Convenient locations in Navi Mumbai</li>
+    </ul>
+</div>
+
+<div class="service-category">
+    <h3>📍 Visit Us</h3>
+    <p>Experience premium salon services that bring style, confidence, and care together — all under one roof.</p>
