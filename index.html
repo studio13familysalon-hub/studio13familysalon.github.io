@@ -179,6 +179,12 @@ nav a:hover {
     font-size: 1.8em;
     color: #c9a24d;
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.service-category h3:hover {
+    color: #b18e3f;
 }
 
 .service-category p {
@@ -202,51 +208,6 @@ nav a:hover {
     content: "✔ ";
     color: #c9a24d;
     font-weight: bold;
-}
-
-/* SERVICES */
-section h2 {
-    text-align: center;
-    font-size: 2.4em;
-    margin-bottom: 30px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-}
-
-.service-box {
-    background: rgba(248, 248, 248, 0.95);
-    padding: 25px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-    overflow: hidden;
-}
-
-.service-box img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 12px;
-}
-
-.service-box h3 {
-    margin-bottom: 10px;
-    font-size: 1.3em;
-}
-
-.service-box p {
-    font-size: 1em;
-    line-height: 1.5;
-}
-
-.service-box:hover {
-    transform: translateY(-5px);
 }
 
 /* Expanded content styles */
@@ -305,6 +266,51 @@ section h2 {
 
 .toggle-btn:hover {
     background: #b18e3f;
+}
+
+/* SERVICES */
+section h2 {
+    text-align: center;
+    font-size: 2.4em;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.service-box {
+    background: rgba(248, 248, 248, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.service-box img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.service-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.service-box p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
 }
 
 /* LOCATIONS */
@@ -513,84 +519,82 @@ section h2 {
 <h2>Our Services</h2>
 
 <div class="service-category">
-    <h3>💇 Hair Services</h3>
+    <h3 onclick="toggleDetails(this)">💇 Hair Services</h3>
     <p>We offer professional hair services designed to suit your personality, lifestyle, and hair type.</p>
-    <p>Our hair services include:</p>
-    <ul>
-        <li>Haircuts & styling for men, women, and kids</li>
-        <li>Hair wash & blow-dry</li>
-        <li>Hair coloring, global color, highlights & balayage</li>
-        <li>Root touch-ups & grey coverage</li>
-        <li>Hair smoothening, straightening & rebonding</li>
-        <li>Hair spa & deep conditioning treatments</li>
-    </ul>
-    <p>Each service begins with a consultation to understand your needs and recommend the best solution.</p>
+    <div class="service-details">
+        <p>Our hair services include:</p>
+        <ul>
+            <li>Haircuts & styling for men, women, and kids</li>
+            <li>Hair wash & blow-dry</li>
+            <li>Hair coloring, global color, highlights & balayage</li>
+            <li>Root touch-ups & grey coverage</li>
+            <li>Hair smoothening, straightening & rebonding</li>
+            <li>Hair spa & deep conditioning treatments</li>
+        </ul>
+        <p>Each service begins with a consultation to understand your needs and recommend the best solution.</p>
+    </div>
 </div>
 
 <div class="service-category">
-    <h3>💆 Beauty & Skincare Services</h3>
+    <h3 onclick="toggleDetails(this)">💆 Beauty & Skincare Services</h3>
     <p>Relax, refresh, and rejuvenate with our professional beauty treatments.</p>
-    <p>Beauty services include:</p>
-    <ul>
-        <li>Facials & clean-ups</li>
-        <li>Skin treatments for glow & hydration</li>
-        <li>Waxing & threading</li>
-        <li>Manicure & pedicure</li>
-        <li>Bridal & pre-bridal beauty care</li>
-    </ul>
-    <p>We use hygienic practices and skin-friendly products to ensure safe and effective treatments.</p>
+    <div class="service-details">
+        <p>Beauty services include:</p>
+        <ul>
+            <li>Facials & clean-ups</li>
+            <li>Skin treatments for glow & hydration</li>
+            <li>Waxing & threading</li>
+            <li>Manicure & pedicure</li>
+            <li>Bridal & pre-bridal beauty care</li>
+        </ul>
+        <p>We use hygienic practices and skin-friendly products to ensure safe and effective treatments.</p>
+    </div>
 </div>
 
 <div class="service-category">
-    <h3>👰 Bridal & Party Styling</h3>
+    <h3 onclick="toggleDetails(this)">👰 Bridal & Party Styling</h3>
     <p>Make your special moments unforgettable with our bridal and party styling services.</p>
-    <p>We specialize in:</p>
-    <ul>
-        <li>Bridal makeup & hair styling</li>
-        <li>Engagement & reception looks</li>
-        <li>Party & festive makeup</li>
-        <li>Trial sessions available</li>
-        <li>Customized bridal packages</li>
-    </ul>
-    <p>Our team focuses on enhancing your natural beauty while ensuring long-lasting results.</p>
+    <div class="service-details">
+        <p>We specialize in:</p>
+        <ul>
+            <li>Bridal makeup & hair styling</li>
+            <li>Engagement & reception looks</li>
+            <li>Party & festive makeup</li>
+            <li>Trial sessions available</li>
+            <li>Customized bridal packages</li>
+        </ul>
+        <p>Our team focuses on enhancing your natural beauty while ensuring long-lasting results.</p>
+    </div>
 </div>
 
 <div class="service-category">
-    <h3>🧔 Men’s Grooming Services</h3>
+    <h3 onclick="toggleDetails(this)">🧔 Men’s Grooming Services</h3>
     <p>Modern grooming services tailored specially for men.</p>
-    <p>Men’s services include:</p>
-    <ul>
-        <li>Haircuts & styling</li>
-        <li>Beard trimming & shaping</li>
-        <li>Men’s facials & skincare</li>
-        <li>Hair treatments & scalp care</li>
-    </ul>
-    <p>Perfect for everyday grooming as well as special occasions.</p>
+    <div class="service-details">
+        <p>Men’s services include:</p>
+        <ul>
+            <li>Haircuts & styling</li>
+            <li>Beard trimming & shaping</li>
+            <li>Men’s facials & skincare</li>
+            <li>Hair treatments & scalp care</li>
+        </ul>
+        <p>Perfect for everyday grooming as well as special occasions.</p>
+    </div>
 </div>
 
 <div class="service-category">
-    <h3>👶 Kids’ Hair Services</h3>
+    <h3 onclick="toggleDetails(this)">👶 Kids’ Hair Services</h3>
     <p>We provide a comfortable and friendly environment for children.</p>
-    <p>Kids’ services include:</p>
-    <ul>
-        <li>Safe & stylish haircuts</li>
-        <li>Gentle handling by trained professionals</li>
-        <li>Fun and stress-free experience</li>
-    </ul>
-    <p>Parents trust us for quality and care.</p>
+    <div class="service-details">
+        <p>Kids’ services include:</p>
+        <ul>
+            <li>Safe & stylish haircuts</li>
+            <li>Gentle handling by trained professionals</li>
+            <li>Fun and stress-free experience</li>
+        </ul>
+        <p>Parents trust us for quality and care.</p>
+    </div>
 </div>
 
 <div class="service-category">
-    <h3>⭐ Why Choose STUDIO 13 FAMILY SALON?</h3>
-    <ul>
-        <li>Experienced & trained professionals</li>
-        <li>Premium products (L’Oréal, Kérastase & more)</li>
-        <li>Family-friendly & hygienic environment</li>
-        <li>Personalized consultation</li>
-        <li>Convenient locations in Navi Mumbai</li>
-    </ul>
-</div>
-
-<div class="service-category">
-    <h3>📍 Visit Us</h3>
-    <p>Experience premium salon services that bring style, confidence, and care together — all under one
+    <h3 onclick="toggleDetails(this)">⭐ Why Choose STUDIO 13 FAMILY SALON?</h
