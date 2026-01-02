@@ -518,6 +518,14 @@ section h2 {
 <section class="detailed-services container">
 <h2>Our Services</h2>
 
+<script>
+function toggleDetails(element) {
+    const details = element.nextElementSibling;
+    if (details && details.classList.contains('service-details')) {
+        details.style.display = (details.style.display === 'none' || details.style.display === '') ? 'block' : 'none';
+    }
+}
+</script>    
 <div class="service-category">
     <h3 onclick="toggleDetails(this)">💇 Hair Services</h3>
     <p>We offer professional hair services designed to suit your personality, lifestyle, and hair type.</p>
@@ -597,4 +605,18 @@ section h2 {
 </div>
 
 <div class="service-category">
-    <h3 onclick="toggleDetails(this)">⭐ Why Choose STUDIO 13 FAMILY SALON?</h
+    <h3 onclick="toggleDetails(this)">⭐ Why Choose STUDIO 13 FAMILY SALON?</h3>
+    <p>Discover what sets us apart from other salons in Navi Mumbai.</p>
+    <div class="service-details">
+        <p>Reasons to choose us:</p>
+        <ul>
+            <li>Experienced professionals with over 9 years of service</li>
+            <li>Hygiene and safety as top priorities</li>
+            <li>Premium products from L’Oréal and Kérastase</li>
+            <li>Family-friendly environment for all ages</li>
+            <li>Affordable pricing with no hidden costs</li>
+            <li>Convenient locations in Sanpada and Nerul</li>
+        </ul>
+        <p>We are committed to delivering exceptional results and customer satisfaction.</p>
+    </div>
+</div>
