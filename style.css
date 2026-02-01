@@ -64,27 +64,28 @@
             transform: scale(1.1);
         }
 
-        .hero {
-            background: linear-gradient(135deg, #ffcc80 0%, #ffb74d 50%, #ff8a65 100%);
-            text-align: center;
-            padding: 80px 20px;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
+        /* HERO */
+.hero {
+    background: linear-gradient(135deg, #ffcc80 0%, #ffb74d 50%, #ff8a65 100%);
+    text-align: center;
+    padding: 80px 20px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://via.placeholder.com/1200x600/ffb74d/ffffff?text=Salon+Services') no-repeat center center;
-            background-size: 100% 100%;
-            opacity: 0.3;
-            z-index: 1;
-        }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://www.studio13salon.com/images/salon13.jpg') no-repeat center center;  /* Replace with YOUR actual hosted image URL */
+    background-size: cover;  /* Changed to 'cover' for better scaling */
+    opacity: 0.3;
+    z-index: 1;
+}
 
         .hero h2 {
             font-size: 3em;
