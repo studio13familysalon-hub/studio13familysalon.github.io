@@ -66,26 +66,33 @@
 
         /* HERO */
 .hero {
-    background: linear-gradient(135deg, #ffcc80 0%, #ffb74d 50%, #ff8a65 100%);
+    position: relative;
     text-align: center;
     padding: 80px 20px;
     color: #fff;
-    position: relative;
     overflow: hidden;
 }
 
+/* Background image + overlay */
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('https://www.studio13salon.com/images/salon13.jpg') no-repeat center center;  /* Replace with YOUR actual hosted image URL */
-    background-size: cover;  /* Changed to 'cover' for better scaling */
-    opacity: 0.3;
+    inset: 0;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url('https://www.studio13salon.com/images/salon13.jpg') center/cover no-repeat;
     z-index: 1;
 }
+
+/* Keep text above background */
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
 
         .hero h2 {
             font-size: 3em;
