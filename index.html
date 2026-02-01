@@ -16,8 +16,10 @@ body {
     background:
         linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         url("images/salon13.jpg");
-        no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
+    background-attachment: fixed;
     color: #222;
 }
 
@@ -32,6 +34,8 @@ body {
     background: rgba(17, 17, 17, 0.9);
     padding: 20px 0;
     border-bottom: 4px solid #c9a24d;
+    position: relative;
+    z-index: 10;
 }
 
 .site-header h1 {
@@ -59,17 +63,12 @@ nav a:hover {
 
 /* HERO */
 .hero {
-    background:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("images/salon13.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     color: #fff;
     padding: 100px 0;
     text-align: center;
+    position: relative;
+    z-index: 5;
 }
-
 
 .hero h2 {
     font-size: 3em;
@@ -183,7 +182,6 @@ nav a:hover {
     font-size: 1.8em;
     color: #c9a24d;
     margin-bottom: 15px;
-    cursor: pointer;
     transition: color 0.3s;
 }
 
@@ -216,7 +214,7 @@ nav a:hover {
 
 /* Expanded content styles */
 .service-details {
-    display: none;
+    display: block;
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid #ddd;
@@ -324,6 +322,7 @@ section h2 {
     padding: 70px 20px;
     border-radius: 10px;
     margin: 20px;
+    border: 3px dashed #c9a24d; /* Unique dashed border */
 }
 
 .location-box {
@@ -358,6 +357,7 @@ section h2 {
     padding: 70px 0;
     border-radius: 10px;
     margin: 20px;
+    border: 4px double #c9a24d; /* Unique double border */
 }
 
 .final-cta h2 {
@@ -376,6 +376,7 @@ section h2 {
     color: #fff;
     text-align: center;
     padding: 30px 0;
+    border-top: 5px groove #c9a24d; /* Unique groove border */
 }
 
 .site-footer a {
@@ -521,17 +522,9 @@ section h2 {
 
 <section class="detailed-services container">
 <h2>Our Services</h2>
-
-<script>
-function toggleDetails(element) {
-    const details = element.nextElementSibling;
-    if (details && details.classList.contains('service-details')) {
-        details.style.display = (details.style.display === 'none' || details.style.display === '') ? 'block' : 'none';
-    }
-}
-</script>    
+    
 <div class="service-category">
-    <h3 onclick="toggleDetails(this)">💇 Hair Services</h3>
+    <h3>💇 Hair Services</h3>
     <p>We offer professional hair services designed to suit your personality, lifestyle, and hair type.</p>
     <div class="service-details">
         <p>Our hair services include:</p>
@@ -548,7 +541,7 @@ function toggleDetails(element) {
 </div>
 
 <div class="service-category">
-    <h3 onclick="toggleDetails(this)">💆 Beauty & Skincare Services</h3>
+    <h3>💆 Beauty & Skincare Services</h3>
     <p>Relax, refresh, and rejuvenate with our professional beauty treatments.</p>
     <div class="service-details">
         <p>Beauty services include:</p>
@@ -564,7 +557,7 @@ function toggleDetails(element) {
 </div>
 
 <div class="service-category">
-    <h3 onclick="toggleDetails(this)">👰 Bridal & Party Styling</h3>
+    <h3>👰 Bridal & Party Styling</h3>
     <p>Make your special moments unforgettable with our bridal and party styling services.</p>
     <div class="service-details">
         <p>We specialize in:</p>
@@ -580,7 +573,7 @@ function toggleDetails(element) {
 </div>
 
 <div class="service-category">
-    <h3 onclick="toggleDetails(this)">🧔 Men’s Grooming Services</h3>
+    <h3>🧔 Men’s Grooming Services</h3>
     <p>Modern grooming services tailored specially for men.</p>
     <div class="service-details">
         <p>Men’s services include:</p>
@@ -595,7 +588,7 @@ function toggleDetails(element) {
 </div>
 
 <div class="service-category">
-    <h3 onclick="toggleDetails(this)">👶 Kids’ Hair Services</h3>
+    <h3>👶 Kids’ Hair Services</h3>
     <p>We provide a comfortable and friendly environment for children.</p>
     <div class="service-details">
         <p>Kids’ services include:</p>
@@ -609,18 +602,6 @@ function toggleDetails(element) {
 </div>
 
 <div class="service-category">
-    <h3 onclick="toggleDetails(this)">⭐ Why Choose STUDIO 13 FAMILY SALON?</h3>
+    <h3>⭐ Why Choose STUDIO 13 FAMILY SALON?</h3>
     <p>Discover what sets us apart from other salons in Navi Mumbai.</p>
-    <div class="service-details">
-        <p>Reasons to choose us:</p>
-        <ul>
-            <li>Experienced professionals with over 9 years of service</li>
-            <li>Hygiene and safety as top priorities</li>
-            <li>Premium products from L’Oréal and Kérastase</li>
-            <li>Family-friendly environment for all ages</li>
-            <li>Affordable pricing with no hidden costs</li>
-            <li>Convenient locations in Sanpada and Nerul</li>
-        </ul>
-        <p>We are committed to delivering exceptional results and customer satisfaction.</p>
-    </div>
-</div>
+    <div class="service-details
